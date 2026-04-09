@@ -4,7 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import mage.karteikartensimulator.Datenmodell.*;
+import mage.karteikartensimulator.Datenmodell.Data;
+import mage.karteikartensimulator.Datenmodell.KarteiSet;
+import mage.karteikartensimulator.Datenmodell.Profil;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,13 +39,17 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-
 //        launch(args);
 
-        try {
-            Data.getInstance().datenSpeichern();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+    }
+
+    @Override
+    public void init() throws Exception {
+        Data.getInstance().datenSpeichern();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
     }
 }

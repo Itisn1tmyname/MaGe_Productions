@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Test_2_FX" />
+        <module name="Test_1_FX" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="24">
+      <module name="Test_3_FX" target="9" />
+      <module name="Test_3_FX (1)" target="24" />
+      <module name="Test_3_FX (2)" target="24" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
