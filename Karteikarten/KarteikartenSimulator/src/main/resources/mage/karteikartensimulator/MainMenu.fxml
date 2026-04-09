@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="mage.karteikartensimulator.Controller.MainMenu"
+            prefHeight="750.0" prefWidth="1200.0">
+    <left>
+        <GridPane>
+            <TilePane alignment="TOP_CENTER" orientation="VERTICAL">
+                <Button text="START" prefWidth="170">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </TilePane>
+            <TilePane alignment="CENTER" orientation="VERTICAL" GridPane.rowIndex="1">
+                <Button text="Neues Set erstellen" prefWidth="170"/>
+                <Button text="Neue Karteikarte erstelllen" prefWidth="170" />
+                <Button text="Profil wechseln" prefWidth="170" />
+                <Button text="Externe Sets integrieren" prefWidth="170" />
+            </TilePane>
+            <TilePane alignment="BOTTOM_CENTER" orientation="VERTICAL" GridPane.rowIndex="2">
+                <Button text="Optionen" prefWidth="170" />
+                <Button text="Bedienungsanleitung" prefWidth="170" />
+                <Button text="Speichern und Beenden" prefWidth="170" />
+            </TilePane>
+        </GridPane>
+    </left>
+
+    <center>
+        <BorderPane>
+
+        </BorderPane>
+    </center>
+</BorderPane>

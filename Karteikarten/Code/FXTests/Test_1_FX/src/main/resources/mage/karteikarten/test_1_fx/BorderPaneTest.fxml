@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:controller="mage.karteikarten.test_1_fx.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <bottom>
+        <HBox spacing="10" style="-fx-border-width: 2; -fx-border-color: green"
+              alignment="top_right">
+
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+
+            <Button text="Okay" prefWidth="90"/>
+            <Button text="Cancel" prefWidth="90"/>
+            <Button text="Help" prefWidth="90"/>
+
+        </HBox>
+    </bottom>
+
+    <top>
+        <GridPane alignment="center" gridLinesVisible="false"
+                  style="-fx-border-color: lime; -fx-border-width: 0">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.3"/>
+                <ColumnConstraints percentWidth="33.3"/>
+                <ColumnConstraints percentWidth="33.3"/>
+            </columnConstraints>
+            <Label text="This Label is positioned on the left of the top."
+                   style="-fx-border-color: magenta; -fx-border-width: 1; -fx-border-style: dashed"
+                   GridPane.halignment="left"/>
+            <Label text="This Label is positioned in the center of the top."
+                   style="-fx-border-color: pink; -fx-border-width: 1; -fx-border-style: dashed"
+                   GridPane.columnIndex="1" GridPane.halignment="center"/>
+            <Label text="This Label is positioned on the right of the top."
+                   style="-fx-border-color: purple; -fx-border-width: 1; -fx-border-style: dashed"
+                   GridPane.columnIndex="2" GridPane.halignment="right"/>
+        </GridPane>
+    </top>
+
+    <left>
+        <Label text="Left Pane Text Label" alignment="center"
+               style="-fx-border-color: orange; -fx-border-width: 1"/>
+    </left>
+
+    <right>
+        <Label text="Right Pane Text Label" alignment="BOTTOM_LEFT"
+               style="-fx-border-color: orange; -fx-border-width: 1"/>
+    </right>
+
+    <center>
+        <Label text="This Label is in the center position and has reeeeeeeeeeaaally loooooooooooooooooooooooooong text."/>
+    </center>
+
+</BorderPane>
