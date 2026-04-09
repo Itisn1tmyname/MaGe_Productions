@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class KarteiSet {
 
-    private ArrayList<Karteikarte> karten;
     private String name;
     private String info;
+    private ArrayList<Karteikarte> karten;
+
 
     //TODO
 }
