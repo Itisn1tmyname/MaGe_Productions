@@ -43,7 +43,7 @@ public class Data {
         }
     }
 
-    public void datenLaden() throws IOException{
+    /*public void datenLaden() throws IOException{
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
             String input;
             KarteiSet in = new KarteiSet(null, null, new ArrayList<>());
@@ -83,7 +83,7 @@ public class Data {
                 i++;
             }
         }
-    }
+    }*/
 
     private List<Karteikarte> generateKarteikarten() {
         ArrayList<Karteikarte> karten = new ArrayList<>();
