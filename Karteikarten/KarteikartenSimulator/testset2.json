@@ -1,0 +1,12 @@
+{"name": "testset", "info": "Hardcoded Testing Set. Remove before release...", "karten": [
+{"id": "1", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 1"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 1", "antwort": "Antwort 1", "farbe": "#000000"},
+{"id": "2", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 2"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 2", "antwort": "Antwort 2", "farbe": "#000000"},
+{"id": "3", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 3"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 3", "antwort": "Antwort 3", "farbe": "#000000"},
+{"id": "4", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 4"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 4", "antwort": "Antwort 4", "farbe": "#000000"},
+{"id": "5", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 5"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 5", "antwort": "Antwort 5", "farbe": "#000000"},
+{"id": "6", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 6"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 6", "antwort": "Antwort 6", "farbe": "#000000"},
+{"id": "7", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 7"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 7", "antwort": "Antwort 7", "farbe": "#000000"},
+{"id": "8", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 8"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 8", "antwort": "Antwort 8", "farbe": "#000000"},
+{"id": "9", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 9"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 9", "antwort": "Antwort 9", "farbe": "#000000"},
+{"id": "10", "tags": ["LF 3.4 Hard- und Software", "Standard", "Test 10"], "lernfeld": "LF 3.4: Hard- und Software", "frage": "Frage 10", "antwort": "Antwort 10", "farbe": "#000000"}
+]}

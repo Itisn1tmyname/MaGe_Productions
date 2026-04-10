@@ -2,22 +2,10 @@ package mage.karteikartensimulator.Datenmodell;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-record Tag(String name){
-    @Override
-    public String toString() {
-        return "\"" + name + "\"";
-    }
-}
-record Lernfeld(int zahl1, int zahl2, String name){
-    @Override
-    public String toString() {
-        return "\"LF " + zahl1 + "." + zahl2 + ": " + name +"\"";
-    }
-}
 
 
 public class Karteikarte {
@@ -63,7 +51,7 @@ public class Karteikarte {
      */
     public Karteikarte(String json) throws Exception{
 
-        Pattern tagRegex = Pattern.compile("\"(.+)\"");
+        Pattern tagRegex = Pattern.compile("\"([^\"]*)\"");
 
         Matcher matcher = kartenPattern.matcher(json);
 
@@ -95,12 +83,47 @@ public class Karteikarte {
     @Override
     public String toString() {
         return '{' +
-                "\"id\": \"" + id + '\"' +
-                ", \"tags\": " + tags +
-                ", \"lernfeld\": " + lernfeld +
-                ", \"frage\": \"" + frage + '\"' +
-                ", \"antwort\": \"" + antwort + '\"' +
-                ", \"farbe\": \"" + farbe + '\"' +
-                '}';
+                "\n\t\"id\": \"" + id + '\"' +
+                ", \n\t\"tags\": " + tags +
+                ", \n\t\"lernfeld\": " + lernfeld +
+                ", \n\t\"frage\": \"" + frage + '\"' +
+                ", \n\t\"antwort\": \"" + antwort + '\"' +
+                ", \n\t\"farbe\": \"" + farbe + '\"' +
+                "\n}";
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getFrage() {
+        return frage;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public String getTagString() {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < tags.size(); i++){
+            sb.append("#").append(tags.get(i).name().replace(" ", "_"));
+            if (i < tags.size() - 1) sb.append("   ");
+        }
+
+        return sb.toString();
+    }
+
+    public Lernfeld getLernfeld() {
+        return lernfeld;
+    }
+
+    public String getAntwort() {
+        return antwort;
+    }
+
+    public String getFarbe() {
+        return farbe;
     }
 }

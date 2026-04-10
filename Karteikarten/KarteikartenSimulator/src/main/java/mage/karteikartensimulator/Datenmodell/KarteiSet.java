@@ -74,16 +74,14 @@ public class KarteiSet {
     @Override
     public String toString() {
 
-        StringBuilder sb = new StringBuilder("{\"name\": \"" + name + "\", \"info\": \"" + info + "\", \"karten\": [");
+        StringBuilder sb = new StringBuilder("{\n\t\"name\": \"" + name + "\",\n\t\"info\": \"" + info + "\",\n\t\"karten\": [");
         Iterator<Karteikarte> iter = karten.iterator();
         while (iter.hasNext()) {
-            sb.append("\n").append(iter.next().toString());
+            sb.append("\n\t\t").append(iter.next().toString().replace("\t", "\t\t\t").replace("}", "\t\t}"));
             if (iter.hasNext()) sb.append(",");
         }
-        sb.append("\n]}");
+        sb.append("\n\t]\n}");
 
         return sb.toString();
     }
-
-    //TODO
 }

@@ -4,36 +4,58 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="mage.karteikartensimulator.Controller.MainMenu"
-            prefHeight="750.0" prefWidth="1200.0">
+            prefWidth="900" prefHeight="500">
     <left>
-        <GridPane>
-            <TilePane alignment="TOP_CENTER" orientation="VERTICAL">
-                <Button text="START" prefWidth="170">
-                    <font>
-                        <Font name="System Bold" size="15.0" />
-                    </font>
-                </Button>
-            </TilePane>
-            <TilePane alignment="CENTER" orientation="VERTICAL" GridPane.rowIndex="1">
+        <VBox style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-style: hidden solid hidden hidden">
+            <padding>
+                <Insets top="40" bottom="40" left="20" right="10"/>
+            </padding>
+            <Button text="START" prefWidth="170" fx:id="buttonStart">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Button>
+            <VBox alignment="CENTER" VBox.vgrow="ALWAYS" spacing="10">
+                <padding>
+                    <Insets top="40" bottom="40"/>
+                </padding>
                 <Button text="Neues Set erstellen" prefWidth="170"/>
                 <Button text="Neue Karteikarte erstelllen" prefWidth="170" />
                 <Button text="Profil wechseln" prefWidth="170" />
                 <Button text="Externe Sets integrieren" prefWidth="170" />
-            </TilePane>
-            <TilePane alignment="BOTTOM_CENTER" orientation="VERTICAL" GridPane.rowIndex="2">
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" spacing="10">
                 <Button text="Optionen" prefWidth="170" />
                 <Button text="Bedienungsanleitung" prefWidth="170" />
                 <Button text="Speichern und Beenden" prefWidth="170" />
-            </TilePane>
-        </GridPane>
+            </VBox>
+        </VBox>
     </left>
 
     <center>
-        <BorderPane>
+        <VBox>
+            <GridPane VBox.vgrow="ALWAYS" style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden">
 
-        </BorderPane>
+            </GridPane>
+
+            <Label fx:id="labelSetInfo" text="Bitte wähle ein Karteikartenset aus, um zu starten!">
+                <graphic>
+                    <FontIcon iconLiteral="mdi2i-information-box-outline:30:GREY"/>
+                </graphic>
+                <padding>
+                    <Insets topRightBottomLeft="5"/>
+                </padding>
+                <font>
+                    <Font size="15"/>
+                </font>
+            </Label>
+        </VBox>
     </center>
 </BorderPane>

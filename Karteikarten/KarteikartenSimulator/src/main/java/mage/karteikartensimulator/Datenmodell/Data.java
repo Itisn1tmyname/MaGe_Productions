@@ -29,61 +29,26 @@ public class Data {
     }
 
     private void datenSpeichern(String fileName) throws IOException {
+        //TODO: Speichern nur, wenn bestimmter Boolean (haben sich die Daten geändert?) true ist...
 
         try (BufferedWriter bw = Files.newBufferedWriter(Paths.get(fileName))) {
-            bw.write("{\"name\": \"" + fileName.replace(".json", "") + "\", " +
-                    "\"info\": \"Hardcoded Testing Set. Remove before release...\", \"karten\": [\n");
-
-            Iterator<Karteikarte> iter = testSet.getKarten().iterator();
-            while (iter.hasNext()){
-                Karteikarte karte = iter.next();
-                bw.write(karte + (iter.hasNext() ? ",\n" : "\n"));
-            }
-            bw.write("]}");
+            bw.write(testSet.toString());
         }
     }
 
-    /*public void datenLaden() throws IOException{
+    public void datenLaden() throws IOException{
+        StringBuilder sb = new StringBuilder();
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
             String input;
-            KarteiSet in = new KarteiSet(null, null, new ArrayList<>());
-            int i = 0;
-            while (!(input = br.readLine()).equals("]}")) {
-                if (i == 0) {
-                    String[] setData = input.split(", ");
-                    in = new KarteiSet(setData[0].replaceFirst("\\{\"name\": ", "").replace("\"", ""),
-                            setData[1].replaceFirst("\"info\": ", "").replace("\"", ""),
-                            new ArrayList<>());
-                } else {
-                    String[] split = input.split("[\\[\\]]");
-
-                    String id = split[0].replaceAll("(\\{\"id\": \")|(\", \"tags\": )", "");
-
-                    String[] tagArray = split[1].replace("\"", "").split(", ");
-                    ArrayList<Tag> tags = new ArrayList<>();
-                    for (String t : tagArray) tags.add(new Tag(t));
-
-                    split = split[2].replaceFirst(", ", "").split(", ");
-                    for (int j = 0; j < split.length; j++) split[j] = split[j]
-                            .replaceAll(".*\": ", "").replace("\"", "");
-
-                    int zahl1 = Integer.parseInt(split[0].replaceAll("(LF )|\\..*", ""));
-                    int zahl2 = Integer.parseInt(split[0].replaceAll("(LF [0-9]+\\.)|:.*", ""));
-                    Lernfeld lernfeld = new Lernfeld(zahl1, zahl2, split[0].replaceAll("(LF [0-9]+\\.[0-9]+: )", ""));
-
-                    in.getKarten().add(new Karteikarte(
-                            id,
-                            tags,
-                            lernfeld,
-                            null,
-                            null,
-                            null
-                    ));
-                }
-                i++;
+            while((input = br.readLine()) != null) {
+                sb.append(input);
             }
+            testSet = new KarteiSet(sb.toString());
+        } catch (Exception e) {
+            //TODO: Exception Handling!
+            System.out.println(e.getMessage());
         }
-    }*/
+    }
 
     private List<Karteikarte> generateKarteikarten() {
         ArrayList<Karteikarte> karten = new ArrayList<>();

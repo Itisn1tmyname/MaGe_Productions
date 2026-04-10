@@ -18,6 +18,9 @@ public class Main extends Application {
     private static final String VERSION = "0.1";
     private Profil profil;
     private ArrayList<KarteiSet> sets;
+    public static Stage stage;
+
+    //TODO: Booleans für Zustand der Daten: Hat der Nutzer eine Änderung vorgenommen?
 
 
 
@@ -25,8 +28,8 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(
-                "mainMenu.fxml"
-//                "KarteiFrage.fxml"
+//                "mainMenu.fxml"
+                "KarteiFrage.fxml"
 //                "KarteiAntwort.fxml"
 //                "KarteiFrage.fxml"
 //                "OptionenMenu.fxml"
@@ -35,21 +38,22 @@ public class Main extends Application {
         stage.setTitle("Karteikarten Simulator ver. " + VERSION);
         stage.setFullScreen(true);
         stage.setScene(new Scene(fxmlLoader.load()));
+        Main.stage = stage;
         stage.show();
     }
 
     public static void main(String[] args) {
-//        launch(args);
+        launch(args);
 
     }
 
     @Override
     public void init() throws Exception {
-        Data.getInstance().datenSpeichern();
+        Data.getInstance().datenLaden();
     }
 
     @Override
     public void stop() throws Exception {
-        super.stop();
+        Data.getInstance().datenSpeichern();
     }
 }
