@@ -3,39 +3,67 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
+
+
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="mage.karteikartensimulator.Controller.MainMenu"
-            prefWidth="900" prefHeight="500" fx:id="mainBorderPane">
+            prefWidth="1200" prefHeight="750" fx:id="mainBorderPane">
     <left>
-        <VBox style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-style: hidden solid hidden hidden">
+        <VBox style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-style: hidden solid hidden hidden"
+              prefWidth="250">
             <padding>
                 <Insets top="40" bottom="40" left="20" right="10"/>
             </padding>
             <Button text="START" prefWidth="200" fx:id="buttonStart">
                 <font>
-                    <Font name="System Bold" size="15.0" />
+                    <Font name="System Bold" size="20.0" />
                 </font>
             </Button>
             <VBox alignment="CENTER" VBox.vgrow="ALWAYS" spacing="10">
                 <padding>
                     <Insets top="40" bottom="40"/>
                 </padding>
-                <Button text="Neues Set erstellen" prefWidth="200"/>
-                <Button text="Neue Karteikarte erstelllen" prefWidth="200" fx:id="buttonKarteiErstellen"
-                        onAction="#handleKarteiErstellen"/>
-                <Button text="Profil wechseln" prefWidth="200" />
-                <Button text="Externe Sets integrieren" prefWidth="200" />
+                <Button text="Neues Set erstellen" prefWidth="200">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+                <Button text="Karteikarte Erstelllen" prefWidth="200" fx:id="buttonKarteiErstellen"
+                        onAction="#handleKarteiErstellen">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+                <Button text="Profil wechseln" prefWidth="200">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+                <Button text="Externe Sets integrieren" prefWidth="200">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
             </VBox>
             <VBox alignment="BOTTOM_CENTER" spacing="10">
-                <Button text="Optionen" prefWidth="200" />
-                <Button text="Bedienungsanleitung" prefWidth="200" />
-                <Button text="Speichern und Beenden" prefWidth="200" />
+                <Button text="Optionen" prefWidth="200">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+                <Button text="Bedienungsanleitung" prefWidth="200">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
+                <Button text="Speichern und Beenden" prefWidth="200">
+                    <font>
+                        <Font size="15" />
+                    </font>
+                </Button>
             </VBox>
         </VBox>
     </left>

@@ -6,32 +6,38 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Data {
 
     private static final Data instance = new Data();
-    private static final String fileName = "testset.json";
 
+    //TODO: remove testset, do the fileNames in a loop? But directories for files hardcoded.
+    private static final String fileName = "KarteikartenSimulator/testset.json";
+
+    public static final DateTimeFormatter ID_FORMATTER = DateTimeFormatter.ofPattern("yy-D-NNNN");
+    public static final DateTimeFormatter PROFIL_FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm");
+
+    //TODO: Remove Testset, save config, profile, and specific set data instead...
     private KarteiSet testSet;
 
     private Data() {}
 
     public static Data getInstance() { return instance;}
 
+    //TODO: Remove Testset,
     public KarteiSet getTestSet() {
         return testSet;
     }
 
     public void datenSpeichern() throws IOException{
-        datenSpeichern(testSet.getName() + ".json");
+        datenSpeichern(fileName);
     }
 
     private void datenSpeichern(String fileName) throws IOException {
         //TODO: Speichern nur, wenn bestimmter Boolean (haben sich die Daten geändert?) true ist...
-
         try (BufferedWriter bw = Files.newBufferedWriter(Paths.get(fileName))) {
             bw.write(testSet.toString());
         }
@@ -51,11 +57,10 @@ public class Data {
         }
     }
 
-    private List<Karteikarte> generateKarteikarten() {
+    public static List<Karteikarte> generateKarteikarten() {
         ArrayList<Karteikarte> karten = new ArrayList<>();
         for (int i = 1; i <= 10; i++) {
             Karteikarte karte = new Karteikarte(
-                    String.valueOf(i),
                     new ArrayList<>(List.of(
                             new Tag("LF 3.4 Hard- und Software"),
                             new Tag("Standard"),
@@ -63,8 +68,7 @@ public class Data {
                     )),
                     new Lernfeld(3, 4, "Hard- und Software"),
                     "Frage " + i,
-                    "Antwort " + i,
-                    "#000000");
+                    "Antwort " + i);
             karten.add(karte);
         }
 
@@ -178,6 +182,7 @@ public class Data {
                     bw.write("""
                             {
                                 "name": "Standard",
+                                "istAktivesProfil": true,
                                 "stats": {
                                     "1": 0,
                                     "2": 0,
@@ -221,6 +226,5 @@ public class Data {
             default: throw new Exception("Check your Code, Problem populating hardcoded files (name error)!");
         }
     }
-
 
 }

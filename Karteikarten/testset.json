@@ -81,14 +81,6 @@
 			"frage": "Frage 10", 
 			"antwort": "Antwort 10", 
 			"farbe": "#000000"
-		},
-		{
-			"id": "26-101-73675440588345_V/E", 
-			"tags": ["LF 23.2: Lernfeld Optional", "Standard", "Neu", "Handschriftlich erstellt"], 
-			"lernfeld": "LF 23.2: Lernfeld Optional", 
-			"frage": "Ich füge eine neue Karte hinzu.", 
-			"antwort": "Das ist eine Antwort.", 
-			"farbe": "#000000"
 		}
 	]
 }

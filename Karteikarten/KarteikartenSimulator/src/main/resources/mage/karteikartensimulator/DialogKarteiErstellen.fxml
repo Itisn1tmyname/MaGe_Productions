@@ -3,7 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<DialogPane prefHeight="500" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mage.karteikartensimulator.Controller.Erstellen">
+<DialogPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="mage.karteikartensimulator.Controller.Erstellen"
+            fx:id="dialogPane">
     <headerText>
         Bitte gebe die Daten der neuen Karteikarte ein! (Sie wird zunächst dem Set "Alle" zugeordnet)
     </headerText>
@@ -18,15 +21,17 @@
                       GridPane.columnSpan="4" GridPane.rowIndex="1"/>
 
             <Label text="Lernfeld: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-            <TextField fx:id="textZ1" prefWidth="35" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <TextField fx:id="textZ1" maxWidth="35" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
             <Label text="." GridPane.columnIndex="2" GridPane.rowIndex="2"/>
             <TextField fx:id="textZ2" prefWidth="35" promptText="0" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
             <TextField fx:id="textLernfeld" promptText="Lernfeld Name eingeben" GridPane.columnIndex="4"
                        GridPane.rowIndex="2"/>
 
             <Label text="Tags:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-            <TextField fx:id="textTags" promptText="Tags mit Komma getrennnt eingeben!" GridPane.columnIndex="1"
+            <TextField fx:id="textTags" promptText="Optional: Tags eingeben" GridPane.columnIndex="1"
                        GridPane.columnSpan="4" GridPane.rowIndex="3"/>
+            <Label text="Tags mit Komma getrennnt eingeben! Lernfeld-Tag wird automatisch erstellt. Feld kann leer gelassen werden."
+                   GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="4"/>
 
         </GridPane>
     </content>

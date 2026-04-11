@@ -2,9 +2,7 @@ package mage.karteikartensimulator.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import mage.karteikartensimulator.Main;
 
@@ -25,15 +23,13 @@ public class MainMenu {
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.initOwner(mainBorderPane.getScene().getWindow());
         dialog.setTitle("Karteikarte Erstellen...");
-
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("DialogKarteiErstellen.fxml"));
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiErstellen.fxml"));
             dialog.getDialogPane().setContent(loader.load());
-
         } catch (IOException e) {
             System.out.println("Der Dialog, um eine neue Karteikarte zu erstellen, konnte nicht geladen werden...");
             System.out.println("-----------------------------------------------");
-            e.printStackTrace();
+            System.out.println(e.getMessage());
             return;
         }
 
@@ -43,7 +39,8 @@ public class MainMenu {
         Optional<ButtonType> result = dialog.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK){
             //TODO: Input handling des Dialogs
-            System.out.println("OK pressed!");
+            Erstellen controller = loader.getController();
+            controller.karteErstellen();
         } else if (result.isPresent() && result.get() == ButtonType.CANCEL) {
             //TODO: Is das nötig?
             System.out.println("CANCEL pressed.");

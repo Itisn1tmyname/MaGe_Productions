@@ -39,7 +39,7 @@ public class Main extends Application {
 //                "KarteiFrage.fxml"
 //                "KarteiAntwort.fxml"
 //                "KarteiFrage.fxml"
-//                "OptionenMenu.fxml"
+//                "DialogOptionenMenu.fxml"
         ));
 
         stage.setTitle("Karteikarten Simulator ver. " + VERSION);

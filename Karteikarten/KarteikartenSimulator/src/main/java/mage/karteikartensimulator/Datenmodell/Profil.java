@@ -7,12 +7,10 @@ import java.util.HashMap;
 public class Profil {
 
     public String name;
+    private boolean istAktivesProfil;
     private HashMap<String, Integer> stats; //einer Karten-ID wird eine Wertung zugeordnet
     private HashMap<String, LocalDateTime> dateLastChecked;
     private HashMap<String, LocalDateTime> dateLastRichtig;
-
-    private static final DateTimeFormatter DATEFORMATTER = DateTimeFormatter.ofPattern("");
-
 
     public Profil(String json) {
         //TODO

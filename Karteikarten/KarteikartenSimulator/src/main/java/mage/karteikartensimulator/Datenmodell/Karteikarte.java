@@ -1,5 +1,6 @@
 package mage.karteikartensimulator.Datenmodell;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -15,7 +16,7 @@ public class Karteikarte {
     private Lernfeld lernfeld;
     private String frage;
     private String antwort;
-    private String farbe;
+    private String farbe = "#000000";
 
     public static final Pattern kartenPattern = Pattern.compile("\\s*\\{\\s*\"id\": \"(?<id>.+)\",\\s*"
             + "\"tags\": \\[\\s*(?<tags>(?:\".*\")*)],\\s*"
@@ -26,13 +27,40 @@ public class Karteikarte {
     );
     private static final Pattern tagPattern = Pattern.compile("\"([^\"]*)\"");
 
-    public Karteikarte(String id, ArrayList<Tag> tags, Lernfeld lernfeld, String frage, String antwort, String farbe) {
-        this.id = id;
+    public Karteikarte(ArrayList<Tag> tags, Lernfeld lernfeld, String frage, String antwort) {
+
+        Tag lf = new Tag(lernfeld.toString().replace("\"", ""));
+        if (!tags.contains(lf))
+            tags.addFirst(lf);
+
         this.tags = tags;
         this.lernfeld = lernfeld;
         this.frage = frage;
         this.antwort = antwort;
-        this.farbe = farbe;
+        this.id = calculateID();
+    }
+
+    //TODO: Validierung der Daten statt Exception werfen...
+    public Karteikarte(String frage, String antwort, String zahl1, String zahl2, String lernfeldname, String... tags)
+            throws NumberFormatException {
+        int z1 = Integer.parseInt(zahl1);
+        int z2 = Integer.parseInt(zahl2);
+
+        this.tags = new ArrayList<>();
+
+        for (String tag : tags) {
+            if (!tag.isEmpty()) this.tags.add(new Tag(tag));
+        }
+
+        this.lernfeld = new Lernfeld(z1, z2, lernfeldname);
+
+        Tag lf = new Tag(lernfeld.toString().replace("\"", ""));
+        if (!this.tags.contains(lf))
+            this.tags.addFirst(lf);
+
+        this.frage = frage;
+        this.antwort = antwort;
+        this.id = calculateID();
     }
 
     /**
@@ -80,6 +108,12 @@ public class Karteikarte {
         }
     }
 
+    private String calculateID() {
+        return LocalDateTime.now().format(Data.ID_FORMATTER) + "_" + (char)(Math.abs(this.frage.hashCode()%26)+65)
+                + "/" + (char)(Math.abs(this.antwort.hashCode()%26)+65);
+    }
+
+
     @Override
     public String toString() {
         return '{' +
@@ -125,5 +159,9 @@ public class Karteikarte {
 
     public String getFarbe() {
         return farbe;
+    }
+
+    public void setFarbe(String farbe) {
+        this.farbe = farbe;
     }
 }
