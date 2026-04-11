@@ -17,7 +17,7 @@
             <padding>
                 <Insets top="40" bottom="40" left="20" right="10"/>
             </padding>
-            <Button text="START" prefWidth="170" fx:id="buttonStart">
+            <Button text="START" prefWidth="200" fx:id="buttonStart">
                 <font>
                     <Font name="System Bold" size="15.0" />
                 </font>
@@ -26,16 +26,16 @@
                 <padding>
                     <Insets top="40" bottom="40"/>
                 </padding>
-                <Button text="Neues Set erstellen" prefWidth="170"/>
-                <Button text="Neue Karteikarte erstelllen" prefWidth="170" fx:id="buttonKarteiErstellen"
+                <Button text="Neues Set erstellen" prefWidth="200"/>
+                <Button text="Neue Karteikarte erstelllen" prefWidth="200" fx:id="buttonKarteiErstellen"
                         onAction="#handleKarteiErstellen"/>
-                <Button text="Profil wechseln" prefWidth="170" />
-                <Button text="Externe Sets integrieren" prefWidth="170" />
+                <Button text="Profil wechseln" prefWidth="200" />
+                <Button text="Externe Sets integrieren" prefWidth="200" />
             </VBox>
             <VBox alignment="BOTTOM_CENTER" spacing="10">
-                <Button text="Optionen" prefWidth="170" />
-                <Button text="Bedienungsanleitung" prefWidth="170" />
-                <Button text="Speichern und Beenden" prefWidth="170" />
+                <Button text="Optionen" prefWidth="200" />
+                <Button text="Bedienungsanleitung" prefWidth="200" />
+                <Button text="Speichern und Beenden" prefWidth="200" />
             </VBox>
         </VBox>
     </left>

@@ -35,7 +35,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(
-                "mainMenu.fxml"
+                "MainMenu.fxml"
 //                "KarteiFrage.fxml"
 //                "KarteiAntwort.fxml"
 //                "KarteiFrage.fxml"
