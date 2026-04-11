@@ -5,18 +5,25 @@ import java.util.HashMap;
 public class Profil {
 
     public String name;
-    private HashMap<String, Integer> stats;
+    private HashMap<String, Integer> stats; //einer Karten-ID wird eine Wertung zugeordnet
 
     public Profil(String json) {
         //TODO
     }
 
+    public Profil(String name, HashMap<String, Integer> stats) {
+        this.name = name;
+        this.stats = stats;
+    }
+
     @Override
     public String toString() {
-        //TODO
-        return "Steuerung.Profil{" +
-                "name='" + name + '\'' +
-                ", stats=" + stats +
+
+        System.out.println("Achtung! Profil.toString() ist derzeit fehlerhaft, stats werden nicht ordnungsgemäß übersetzt!");
+
+        return '{' +
+                "\"name\": \"" + name + '\"' +
+                ", \"stats\": " + stats +
                 '}';
     }
 

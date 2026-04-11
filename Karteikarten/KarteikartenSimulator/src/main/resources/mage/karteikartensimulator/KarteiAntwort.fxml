@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="mage.karteikartensimulator.Controller.Karteikarte"
+            fx:controller="mage.karteikartensimulator.Controller.Antwort"
             prefHeight="750.0" prefWidth="1200.0">
 
     <top>

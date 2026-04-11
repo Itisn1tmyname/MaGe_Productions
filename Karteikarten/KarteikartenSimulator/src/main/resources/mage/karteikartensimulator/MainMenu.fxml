@@ -11,7 +11,7 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="mage.karteikartensimulator.Controller.MainMenu"
-            prefWidth="900" prefHeight="500">
+            prefWidth="900" prefHeight="500" fx:id="mainBorderPane">
     <left>
         <VBox style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-style: hidden solid hidden hidden">
             <padding>
@@ -27,7 +27,8 @@
                     <Insets top="40" bottom="40"/>
                 </padding>
                 <Button text="Neues Set erstellen" prefWidth="170"/>
-                <Button text="Neue Karteikarte erstelllen" prefWidth="170" />
+                <Button text="Neue Karteikarte erstelllen" prefWidth="170" fx:id="buttonKarteiErstellen"
+                        onAction="#handleKarteiErstellen"/>
                 <Button text="Profil wechseln" prefWidth="170" />
                 <Button text="Externe Sets integrieren" prefWidth="170" />
             </VBox>

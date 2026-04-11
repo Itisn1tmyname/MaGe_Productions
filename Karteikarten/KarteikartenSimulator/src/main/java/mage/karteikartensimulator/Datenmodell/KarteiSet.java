@@ -1,9 +1,6 @@
 package mage.karteikartensimulator.Datenmodell;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,6 +18,12 @@ public class KarteiSet {
         this.name = name;
         this.info = info;
         this.karten = karten;
+    }
+
+    public KarteiSet(String name, String info, Collection<String> kartenIDs) {
+        this.name = name;
+        this.info = info;
+
     }
 
     /**

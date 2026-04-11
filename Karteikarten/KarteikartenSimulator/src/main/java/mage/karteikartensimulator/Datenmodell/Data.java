@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -68,6 +69,133 @@ public class Data {
         }
 
         return karten;
+    }
+
+    public static void populate(String fileName) throws Exception{
+        Path path = Path.of(fileName);
+        switch (fileName) {
+            case "config/Karten/alle.json" : {
+                try (BufferedWriter bw = Files.newBufferedWriter(path)) {
+                    bw.write("""
+                            {
+                            	"name": "testset",
+                            	"info": "Hardcoded Testing Set. Remove before release...",
+                            	"karten": [
+                            		{
+                            			"id": "1",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 1"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 1",\s
+                            			"antwort": "Antwort 1",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "2",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 2"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 2",\s
+                            			"antwort": "Antwort 2",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "3",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 3"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 3",\s
+                            			"antwort": "Antwort 3",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "4",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 4"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 4",\s
+                            			"antwort": "Antwort 4",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "5",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 5"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 5",\s
+                            			"antwort": "Antwort 5",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "6",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 6"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 6",\s
+                            			"antwort": "Antwort 6",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "7",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 7"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 7",\s
+                            			"antwort": "Antwort 7",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "8",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 8"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 8",\s
+                            			"antwort": "Antwort 8",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "9",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 9"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 9",\s
+                            			"antwort": "Antwort 9",\s
+                            			"farbe": "#000000"
+                            		},
+                            		{
+                            			"id": "10",\s
+                            			"tags": ["LF 3.4 Hard- und Software", "Standard", "Test 10"],\s
+                            			"lernfeld": "LF 3.4: Hard- und Software",\s
+                            			"frage": "Frage 10",\s
+                            			"antwort": "Antwort 10",\s
+                            			"farbe": "#000000"
+                            		}
+                            	]
+                            }""");
+                }
+                break;
+            }
+            case "config/config.json" : {
+                try (BufferedWriter bw = Files.newBufferedWriter(path)) {
+                    bw.write("""
+                            """);
+                }
+                break;
+            }
+            case "config/Profile/standard.json" : {
+                try (BufferedWriter bw = Files.newBufferedWriter(path)) {
+                    bw.write("""
+                            {
+                                "name": "Standard",
+                                "stats": {
+                                    "1": 0,
+                                    "2": 0,
+                                    "3": 0,
+                                    "4": 0,
+                                    "5": 0,
+                                    "6": 0,
+                                    "7": 0,
+                                    "8": 0,
+                                    "9": 0,
+                                    "10": 0
+                                }
+                            }""");
+                }
+                break;
+            }
+            default: throw new Exception("Check your Code, Problem populating hardcoded files (name error)!");
+        }
     }
 
 

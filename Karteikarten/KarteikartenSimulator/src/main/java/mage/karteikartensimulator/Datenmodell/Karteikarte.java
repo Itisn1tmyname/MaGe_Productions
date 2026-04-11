@@ -22,7 +22,9 @@ public class Karteikarte {
             + "\"lernfeld\": \"LF (?<zahl1>[0-9]+).(?<zahl2>[0-9]+): (?<name>.+)\",\\s*"
             + "\"frage\": \"(?<frage>.+)\",\\s*"
             + "\"antwort\": \"(?<antwort>.+)\",\\s*"
-            + "\"farbe\": \"(?<farbe>#[0-9A-F]{6})\"\\s*}\\s*");
+            + "\"farbe\": \"(?<farbe>#[0-9A-F]{6})\"\\s*}\\s*"
+    );
+    private static final Pattern tagPattern = Pattern.compile("\"([^\"]*)\"");
 
     public Karteikarte(String id, ArrayList<Tag> tags, Lernfeld lernfeld, String frage, String antwort, String farbe) {
         this.id = id;
@@ -51,13 +53,11 @@ public class Karteikarte {
      */
     public Karteikarte(String json) throws Exception{
 
-        Pattern tagRegex = Pattern.compile("\"([^\"]*)\"");
-
         Matcher matcher = kartenPattern.matcher(json);
 
         if (matcher.matches()) {
 
-            Matcher tagMatcher = tagRegex.matcher(matcher.group("tags"));
+            Matcher tagMatcher = tagPattern.matcher(matcher.group("tags"));
 
             this.tags = new ArrayList<>();
             while (tagMatcher.find()){
