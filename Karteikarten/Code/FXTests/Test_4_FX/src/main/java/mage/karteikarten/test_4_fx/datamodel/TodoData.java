@@ -16,7 +16,7 @@ import java.util.List;
 public class TodoData {
 
     private static final TodoData instance = new TodoData();
-    private static final String fileName = "todoList.txt";
+    private static final String fileName = "Code/FXTests/Test_4_FX/todoList.txt";
     private List<TodoItem> todoItems;
     private final DateTimeFormatter formatter;
 
@@ -30,6 +30,10 @@ public class TodoData {
 
     public List<TodoItem> getTodoItems() {
         return todoItems;
+    }
+
+    public void addTodoItem (TodoItem item) {
+        todoItems.add(item);
     }
 
     public void loadTodoItems() throws IOException {

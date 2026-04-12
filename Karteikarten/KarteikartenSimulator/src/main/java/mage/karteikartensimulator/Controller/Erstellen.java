@@ -7,8 +7,6 @@ import javafx.scene.control.TextField;
 import mage.karteikartensimulator.Datenmodell.Data;
 import mage.karteikartensimulator.Datenmodell.Karteikarte;
 
-import java.util.EventListener;
-
 public class Erstellen {
 
     @FXML
@@ -50,6 +48,6 @@ public class Erstellen {
         //TODO: Set, in dem gespeichert wird, anpassen. In Data eine Funktion zum hinzufügen einer Karte erstellen,
         // damit neue Karten immer auch zu "alle.json" hinzugefügt werden. Auswahlmöglichkeit hinzufügen, um dem User
         // zu ermöglichen, die Ziel-Sets zu wählen.
-        Data.getInstance().getTestSet().getKarten().add(karte);
+        Data.getInstance().getKartenSets().get("alle").getKarten().add(karte);
     }
 }

@@ -3,3 +3,6 @@ Doctor's Appointment	See Dr. Smith at 123 Main Street. Bring paperwork	22-04-26
 Finish design proposal for client	I promised Mike I'd email website mockups by Friday 22nd April	24-04-26
 Pickup Doug at the train station	Doug's arriving on March 23rd on the 5:00 train	23-03-26
 Pick up dry cleaning	The clothes should be ready by Friday	10-04-26
+My new Todo Item	This is my new Todo Item and the description is getting pretty big.	14-04-26
+Tims item	This is a test	05-05-26
+Yet another todo Item	This is a longer Description	27-04-26

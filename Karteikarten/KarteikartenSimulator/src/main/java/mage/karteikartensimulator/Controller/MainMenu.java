@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.TilePane;
 import mage.karteikartensimulator.Main;
 
 import java.io.IOException;
@@ -11,6 +12,8 @@ import java.util.Optional;
 
 public class MainMenu {
 
+    @FXML
+    private TilePane tileKartensets;
     @FXML
     private BorderPane mainBorderPane;
     @FXML
@@ -45,5 +48,9 @@ public class MainMenu {
             //TODO: Is das nötig?
             System.out.println("CANCEL pressed.");
         }
+    }
+
+    public void populateSetPane() {
+        //TODO: die Liste der Sets von Data abgreifen und für jeden Setname ein Label zu tileKartensets hinzufügen.
     }
 }

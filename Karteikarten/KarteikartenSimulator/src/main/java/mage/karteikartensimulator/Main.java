@@ -57,14 +57,13 @@ public class Main extends Application {
     @Override
     public void init() throws Exception {
         String[] requiredFiles = {
-                "config/Karten/alle.json",
-                "config/config.json",
-                "config/Profile/standard.json"
+                Data.CONFIG_FILENAME,
+                Data.SET_ALLE_FILENAME,
+                Data.PROFIL_STANDARD_FILENAME
         };
 
         for (String fileName : requiredFiles) {
-            Path path = Path.of(fileName);
-
+            Path path = Path.of(Data.CONFIG_DIRECTORY + fileName);
             if (!Files.exists(path)) {
                 Files.createDirectories(path.getParent());
                 Files.createFile(path);

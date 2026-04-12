@@ -32,12 +32,16 @@ public class Profil {
                 '}';
     }
 
-    public int getSerie(String frage){
-        return stats.get(frage);
+    public int getStufe(String kartenID){
+        return stats.get(kartenID);
     }
 
-    public void adjustSerie(String frage, int val){
-        stats.merge(frage, val, Integer::sum);
+    public void stufeSteigern(String kartenID){
+        stats.merge(kartenID, 1, (old, nw) -> (old > 0) ? old + nw : nw);
+    }
+
+    public void stufeKleiner(String kartenID) {
+        stats.merge(kartenID, 0, (old, nw) -> (old > 0) ? nw : old - 1) ;
     }
 
 }

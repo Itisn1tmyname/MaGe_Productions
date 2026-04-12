@@ -70,9 +70,11 @@
 
     <center>
         <VBox>
-            <GridPane VBox.vgrow="ALWAYS" style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden">
+            <TilePane VBox.vgrow="ALWAYS" vgap="15" hgap="15" fx:id="tileKartensets"
+                      style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden">
 
-            </GridPane>
+
+            </TilePane>
 
             <Label fx:id="labelSetInfo" text="Bitte wähle ein Karteikartenset aus, um zu starten!">
                 <graphic>

@@ -11,7 +11,7 @@ import java.util.List;
 public class Antwort {
 
     //TODO: Change the list to not be hardcoded
-    private static final List<Karteikarte> KARTEN = Data.getInstance().getTestSet().getKarten();
+    private static final List<Karteikarte> KARTEN = Data.getInstance().getKartenSets().get("alle").getKarten();
 
     @FXML
     private Label labelLernfeld;

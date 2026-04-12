@@ -5,34 +5,34 @@
 <?import javafx.scene.control.Label?>
 
 
-<StackPane fx:controller="mage.karteikarten.test_1_fx.Controller"
-           xmlns:fx="http://javafx.com/fxml">
+<!--<StackPane fx:controller="mage.karteikarten.test_1_fx.Controller"-->
+<!--           xmlns:fx="http://javafx.com/fxml">-->
 
-    <Label text="Label One" style="-fx-background-color: red"/>
-    <Button text="Button One" style="-fx-background-color: green"/>
-    <Label text="Second Label Text" style="-fx-background-color: blue"/>
+<!--    <Label text="Label One" style="-fx-background-color: red"/>-->
+<!--    <Button text="Button One" style="-fx-background-color: green"/>-->
+<!--    <Label text="Second Label Text" style="-fx-background-color: blue"/>-->
 
-</StackPane>
-
-
+<!--</StackPane>-->
 
 
 
-<!--<TilePane fx:controller="mage.karteikarten.test_1_fx.Controller"-->
-<!--          xmlns:fx="http://javafx.com/fxml">-->
 
-<!--    <Button text="Button One"/>-->
-<!--    <Button text="Button Two"/>-->
-<!--    <Button text="Button Three"/>-->
-<!--    <Button text="Button Four"/>-->
-<!--    <Button text="Button Five"/>-->
-<!--    <Button text="Button Six"/>-->
-<!--    <Button text="Button Seven"/>-->
-<!--    <Button text="Button Eight"/>-->
-<!--    <Button text="Button Nine"/>-->
-<!--    <Button text="Button Ten"/>-->
 
-<!--</TilePane>-->
+<TilePane fx:controller="mage.karteikarten.test_1_fx.Controller"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <Button text="Button One"/>
+    <Button text="Button Two"/>
+    <Button text="Button Three"/>
+    <Button text="Button Four"/>
+    <Button text="Button Five"/>
+    <Button text="Button Six"/>
+    <Button text="Button Seven"/>
+    <Button text="Button Eight"/>
+    <Button text="Button Nine"/>
+    <Button text="Button Ten"/>
+
+</TilePane>
 
 
 <!--<FlowPane fx:controller="mage.karteikarten.test_1_fx.Controller"-->

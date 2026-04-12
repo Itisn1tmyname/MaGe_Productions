@@ -16,14 +16,12 @@ public class Karteikarte {
     private Lernfeld lernfeld;
     private String frage;
     private String antwort;
-    private String farbe = "#000000";
 
     public static final Pattern kartenPattern = Pattern.compile("\\s*\\{\\s*\"id\": \"(?<id>.+)\",\\s*"
             + "\"tags\": \\[\\s*(?<tags>(?:\".*\")*)],\\s*"
             + "\"lernfeld\": \"LF (?<zahl1>[0-9]+).(?<zahl2>[0-9]+): (?<name>.+)\",\\s*"
             + "\"frage\": \"(?<frage>.+)\",\\s*"
-            + "\"antwort\": \"(?<antwort>.+)\",\\s*"
-            + "\"farbe\": \"(?<farbe>#[0-9A-F]{6})\"\\s*}\\s*"
+            + "\"antwort\": \"(?<antwort>.+)\"\\s*}\\s*"
     );
     private static final Pattern tagPattern = Pattern.compile("\"([^\"]*)\"");
 
@@ -100,7 +98,6 @@ public class Karteikarte {
             );
             this.frage = matcher.group("frage");
             this.antwort = matcher.group("antwort");
-            this.farbe = matcher.group("farbe");
 
         } else {
             System.out.println(json);
@@ -122,7 +119,6 @@ public class Karteikarte {
                 ", \n\t\"lernfeld\": " + lernfeld +
                 ", \n\t\"frage\": \"" + frage + '\"' +
                 ", \n\t\"antwort\": \"" + antwort + '\"' +
-                ", \n\t\"farbe\": \"" + farbe + '\"' +
                 "\n}";
     }
 
@@ -157,11 +153,4 @@ public class Karteikarte {
         return antwort;
     }
 
-    public String getFarbe() {
-        return farbe;
-    }
-
-    public void setFarbe(String farbe) {
-        this.farbe = farbe;
-    }
 }

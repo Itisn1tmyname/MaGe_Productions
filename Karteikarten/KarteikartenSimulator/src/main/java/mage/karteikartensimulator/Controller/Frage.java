@@ -1,20 +1,16 @@
 package mage.karteikartensimulator.Controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import mage.karteikartensimulator.Datenmodell.*;
 
-import java.io.IOException;
 import java.util.List;
 
 public class Frage {
 
     //TODO: Change the list to not be hardcoded
-    private static final List<mage.karteikartensimulator.Datenmodell.Karteikarte> KARTEN = Data.getInstance().getTestSet().getKarten();
+    private static final List<Karteikarte> KARTEN = Data.getInstance().getKartenSets().get("alle").getKarten();
 
     @FXML
     private Label labelLernfeld;
