@@ -15,10 +15,10 @@
         <GridPane hgap="10" vgap="10">
             <Label text="Frage: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
             <TextArea fx:id="textAreaFrage" promptText="Bitte hier die Frage eingeben!" GridPane.columnIndex="1"
-                      GridPane.columnSpan="4" GridPane.rowIndex="0"/>
+                      GridPane.columnSpan="4" GridPane.rowIndex="0" wrapText="true"/>
             <Label text="Antwort: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
             <TextArea fx:id="textAreaAntwort" promptText="Bitte hier die Antwort eingeben!" GridPane.columnIndex="1"
-                      GridPane.columnSpan="4" GridPane.rowIndex="1"/>
+                      GridPane.columnSpan="4" GridPane.rowIndex="1" wrapText="true"/>
 
             <Label text="Lernfeld: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
             <TextField fx:id="textZ1" maxWidth="35" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>

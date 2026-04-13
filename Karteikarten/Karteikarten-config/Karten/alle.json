@@ -71,6 +71,13 @@
 			"lernfeld": "LF 3.4: Hard- und Software", 
 			"frage": "Frage 10", 
 			"antwort": "Antwort 10"
+		},
+		{
+			"id": "26-103-36976869865800_A/G", 
+			"tags": ["LF 3.0: CCNA", "OSI", "Grundlagen"], 
+			"lernfeld": "LF 3.0: CCNA", 
+			"frage": "Was ist der Unterschied zwischen dem OSI- und dem TCP/IP-Modell?", 
+			"antwort": "Das OSI-Modell hat 7 Schichten, das TCP/IP-Modell nur 4. OSI ist stärker zur Erklärung und Analyse, da es feinschichtiger ist. Das TCP/IP-Modell ist näher an reale Internet-Protokolle angelehnt."
 		}
 	]
 }
