@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Frage/Antwort input Zeilenumbruch ermöglicht">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Karten/alle.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Karten/alle.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,23 +18,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Itisn1tmyname"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Itisn1tmyname&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Itisn1tmyname/MaGe_Productions",
-    "accountId": "2855185a-5b5e-40aa-aeb7-c4a14ce21f36"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Itisn1tmyname/MaGe_Productions&quot;,
+    &quot;accountId&quot;: &quot;2855185a-5b5e-40aa-aeb7-c4a14ce21f36&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3CIJi2pslZoKPqH6UxkhwjHUZUf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,6 +46,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -103,6 +107,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Erstellen: wrapText=true" />

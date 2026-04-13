@@ -7,6 +7,7 @@
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
 
+<?import javafx.scene.Group?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="mage.karteikartensimulator.Controller.MainMenu"
@@ -26,7 +27,7 @@
                 <padding>
                     <Insets top="40" bottom="40"/>
                 </padding>
-                <Button text="Neues Set erstellen" prefWidth="200" fx:id="buttonNeuesSet" onAction="#testObservableMap">
+                <Button text="Neues Set erstellen" prefWidth="200" fx:id="buttonNeuesSet">
                     <font>
                         <Font size="15" />
                     </font>
@@ -70,10 +71,14 @@
 
     <center>
         <VBox>
-            <TilePane VBox.vgrow="ALWAYS" vgap="15" hgap="15" fx:id="tileKartensets"
+            <TilePane VBox.vgrow="ALWAYS" vgap="15" hgap="15" fx:id="tileKartenSets"
                       style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden">
-
-
+                <padding>
+                    <Insets topRightBottomLeft="20"/>
+                </padding>
+                <fx:define>
+                    <ToggleGroup fx:id="toggleGroupKartenSets"/>
+                </fx:define>
             </TilePane>
 
             <Label fx:id="labelSetInfo" text="Bitte wähle ein Karteikartenset aus, um zu starten!">

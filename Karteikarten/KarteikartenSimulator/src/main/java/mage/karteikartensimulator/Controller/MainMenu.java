@@ -1,30 +1,41 @@
 package mage.karteikartensimulator.Controller;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.text.Font;
 import mage.karteikartensimulator.Datenmodell.Data;
 import mage.karteikartensimulator.Datenmodell.KarteiSet;
 import mage.karteikartensimulator.Main;
 
 import java.io.IOException;
+import java.util.Map;
 import java.util.Optional;
 
 public class MainMenu {
 
     @FXML
-    private TilePane tileKartensets;
+    private TilePane tileKartenSets;
+    @FXML
+    private ToggleGroup toggleGroupKartenSets;
     @FXML
     private BorderPane mainBorderPane;
+
     @FXML
     private Button buttonKarteiErstellen;
     @FXML
     private Button buttonOptions;
     @FXML
     private Button buttonNeuesSet;
+    @FXML
+    private Button buttonStart;
+
+    @FXML
+    private Label labelSetInfo;
+
+    private KarteiSet selectedSet;
 
     @FXML
     public void handleKarteiErstellen() {
@@ -56,67 +67,40 @@ public class MainMenu {
     }
 
     public void initialize() {
-        //TODO: die Liste der Sets von Data abgreifen und für jeden Setname ein Label zu tileKartensets hinzufügen.
-        //TODO: TableView anschauen, mit ObservableMap verknüpfen <String name, KartenSet set>
+        //TODO
+        populateSetView();
     }
 
-    //TODO: Remove test-Code and bind button "Neues Set" to actual functionality.
-    public void testObservableMap() {
-        try {
-            Data.getInstance().getKartenSets().put("test", new KarteiSet("""
-                    {
-                    	"name": "Testset",
-                    	"info": "Test Test",
-                    	"karten": [
-                    		{
-                    			"id": "26-103-36976869865800_A/G",\s
-                    			"tags": ["LF 3.0: CCNA", "OSI", "Grundlagen"],\s
-                    			"lernfeld": "LF 3.0: CCNA",\s
-                    			"frage": "Was ist der Unterschied zwischen dem OSI- und dem TCP/IP-Modell?",\s
-                    			"antwort": "Das OSI-Modell hat 7 Schichten, das TCP/IP-Modell nur 4. OSI ist stärker zur Erklärung und Analyse, da es feinschichtiger ist. Das TCP/IP-Modell ist näher an reale Internet-Protokolle angelehnt."
-                    		},
-                    		{
-                    			"id": "26-103-39189196882900_P/W",\s
-                    			"tags": ["LF 3.0: CCNA", "OSI", "Grundlagen"],\s
-                    			"lernfeld": "LF 3.0: CCNA",\s
-                    			"frage": "Wie heißen die Schichten des OSI-Modells?",\s
-                    			"antwort": "Schicht 1: Bitübertragung\\nSchicht 2: Sicherung\\nSchicht 3: Vermittlung / Netz\\nSchicht 4: Transport\\nSchicht 5: Sitzung / (Kommunikation)\\nSchicht 6: Darstellung\\nSchicht 7: Anwendung\\n\\n(Schicht 8: der Nutzer)"
-                    		}
-                    	]
-                    }"""));
-            buttonNeuesSet.setDisable(true);
+    //TODO: rufe diese Methode, wenn ein neues Set hinzugefügt wurde oder ein altes Set gelöscht wurde.
+    private void populateSetView() {
+        tileKartenSets.getChildren().clear();
+        buttonStart.setDisable(true);
+        selectedSet = null;
+        setInfo();
+        Map<String, KarteiSet> set = Data.getInstance().getKartenSets();
+        populateSetView("Alle Karten", set.get("alle"));
+        if (set.size() > 1) set.forEach((name, kSet) -> {
+            if (!name.equals("alle")) populateSetView(name, kSet);
+        });
+    }
 
-            System.out.println("""
-                    ---------------------------
-                    Testset erstellt und hinzugefügt:
-                    
-                    """);
-            Data.getInstance().getKartenSets().forEach((name, set) -> System.out.println(set));
+    private void populateSetView(String name, KarteiSet kSet) {
+        ToggleButton child = new ToggleButton(name);
+        child.setToggleGroup(toggleGroupKartenSets);
+        child.setPrefHeight(100);
+        child.setPrefWidth(200);
+        child.setFont(new Font(18));
+        child.setOnAction(_ -> {
+            if (child.isSelected()) selectedSet = kSet;
+            else if (selectedSet.equals(kSet)) selectedSet = null;
+            buttonStart.setDisable(selectedSet == null);
+            setInfo();
+        });
+        tileKartenSets.getChildren().add(child);
+    }
 
-            new Thread(() -> {
-                try {
-                    System.out.println("""
-                            ------------------------------------
-                            Going to sleep!
-                            """);
-                    Thread.sleep(10000);
-                    System.out.println("""
-                            Done sleeping!
-                            -------------------------------------""");
-                } catch (InterruptedException ignored) {}
-                Platform.runLater(() -> {
-                    Data.getInstance().getKartenSets().remove("test");
-                    buttonNeuesSet.setDisable(false);
-                    System.out.println("""
-                            -------------------------------------
-                            Testset wurde gelöscht:
-                            
-                            """);
-                    Data.getInstance().getKartenSets().forEach((name, set) -> System.out.println(set));
-                });
-            }).start();
-
-
-        } catch (Exception ignored) {}
+    private void setInfo() {
+        labelSetInfo.setText(selectedSet == null ? "Bitte wähle ein Karteikartenset aus, um zu starten!"
+                : selectedSet.getName() + ": " + selectedSet.getInfo());
     }
 }

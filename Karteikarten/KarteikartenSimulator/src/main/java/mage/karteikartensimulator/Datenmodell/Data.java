@@ -1,5 +1,8 @@
 package mage.karteikartensimulator.Datenmodell;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableMap;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -25,8 +28,8 @@ public class Data {
     public static final DateTimeFormatter PROFIL_FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm");
 
     //TODO: Make these collections observable. Instantiate with FXCollections.observable...
-    private static final Map<String, KarteiSet> kartenSets = new HashMap<>();
-    private static final Map<String, Profil> profile = new HashMap<>();
+    private static final ObservableMap<String, KarteiSet> kartenSets = FXCollections.observableHashMap();
+    private static final ObservableMap<String, Profil> profile = FXCollections.observableHashMap();
     private static final Einstellungen einstellungen = new Einstellungen();
 
     private Data() {}
