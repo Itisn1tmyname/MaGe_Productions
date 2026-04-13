@@ -38,7 +38,7 @@ public class Antwort {
     private void setKartenLabels(Karteikarte karte) {
         labelLernfeld.setText(karte.getLernfeld().toString().replace("\"", ""));
         labelHashtags.setText(karte.getTagString());
-        labelAntworttext.setText(karte.getAntwort());
+        labelAntworttext.setText(karte.getAntwort().replace("\\n", "\n"));
     }
 
 }

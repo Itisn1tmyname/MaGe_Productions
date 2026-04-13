@@ -41,7 +41,7 @@ public class MainMenu {
 
         Optional<ButtonType> result = dialog.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK){
-            //TODO: Input handling des Dialogs
+            //TODO: Input handling des Dialogs - Erstellen.karteErstellen() anpassen.
             Erstellen controller = loader.getController();
             controller.karteErstellen();
         } else if (result.isPresent() && result.get() == ButtonType.CANCEL) {

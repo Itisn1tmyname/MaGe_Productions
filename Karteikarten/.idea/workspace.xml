@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Erstellen: wrapText=true">
+      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Karten/alle.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Karten/alle.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Antwort.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Antwort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Erstellen.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Erstellen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Frage.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Frage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Itisn1tmyname"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Itisn1tmyname/MaGe_Productions",
+    "accountId": "2855185a-5b5e-40aa-aeb7-c4a14ce21f36"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3CIJi2pslZoKPqH6UxkhwjHUZUf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "X:/Git_Repository/MaGe_Productions/Karteikarten",
+    "settings.editor.selected.configurable": "proofread",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mage.karteikartensimulator.Main" />
+      <module name="KarteikartenSimulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mage.karteikartensimulator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="" />
+      <created>1776067277834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776067277834</updated>
+      <workItem from="1776067284939" duration="2458000" />
+    </task>
+    <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
+      <option name="closed" value="true" />
+      <created>1776068269800</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776068269801</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Erstellen: wrapText=true" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erstellen: wrapText=true" />
+  </component>
+</project>
