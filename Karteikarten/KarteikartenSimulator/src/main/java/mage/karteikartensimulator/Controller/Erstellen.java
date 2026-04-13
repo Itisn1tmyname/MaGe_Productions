@@ -31,8 +31,8 @@ public class Erstellen {
     }
 
     public void karteErstellen(){
-        String frage = textAreaFrage.getText().trim();
-        String antwort = textAreaAntwort.getText().trim();
+        String frage = textAreaFrage.getText().trim().replace("\n", "\\n");
+        String antwort = textAreaAntwort.getText().trim().replace("\n", "\\n");
         String z1 = textZ1.getText().trim();
         String z2 = textZ2.getText().trim();
         String lf = textLernfeld.getText().trim();

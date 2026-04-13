@@ -32,7 +32,7 @@ public class Frage {
 
     private void setKartenLabels(mage.karteikartensimulator.Datenmodell.Karteikarte karte) {
         labelLernfeld.setText(karte.getLernfeld().toString().replace("\"", ""));
-        labelFragentext.setText(karte.getFrage());
+        labelFragentext.setText(karte.getFrage().replace("\\n", "\n"));
         labelHashtags.setText(karte.getTagString());
     }
 
