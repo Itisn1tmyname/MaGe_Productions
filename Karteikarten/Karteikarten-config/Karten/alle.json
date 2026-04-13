@@ -1,6 +1,6 @@
 {
-	"name": "testset",
-	"info": "Hardcoded Testing Set. Remove before release...",
+	"name": "Alle",
+	"info": "Sammlung sämtlicher Karteikarten",
 	"karten": [
 		{
 			"id": "26-103-36976869865800_A/G", 
@@ -8,6 +8,27 @@
 			"lernfeld": "LF 3.0: CCNA", 
 			"frage": "Was ist der Unterschied zwischen dem OSI- und dem TCP/IP-Modell?", 
 			"antwort": "Das OSI-Modell hat 7 Schichten, das TCP/IP-Modell nur 4. OSI ist stärker zur Erklärung und Analyse, da es feinschichtiger ist. Das TCP/IP-Modell ist näher an reale Internet-Protokolle angelehnt."
+		},
+		{
+			"id": "26-103-39189196882900_P/W", 
+			"tags": ["LF 3.0: CCNA", "OSI", "Grundlagen"], 
+			"lernfeld": "LF 3.0: CCNA", 
+			"frage": "Wie heißen die Schichten des OSI-Modells?", 
+			"antwort": "Schicht 1: Bitübertragung\nSchicht 2: Sicherung\nSchicht 3: Vermittlung / Netz\nSchicht 4: Transport\nSchicht 5: Sitzung / (Kommunikation)\nSchicht 6: Darstellung\nSchicht 7: Anwendung\n\n(Schicht 8: der Nutzer)"
+		},
+		{
+			"id": "26-103-40785978802800_Z/W", 
+			"tags": ["LF 3.0: CCNA", "Bitübertragungsschicht"], 
+			"lernfeld": "LF 3.0: CCNA", 
+			"frage": "Welche drei typischen Einsätze für Glasfaserkabel gibt es?", 
+			"antwort": "- Enterprise-Backbone: Etagen- und Gebäudeverbindungen, Switch-Uplinks\n- FTTH / Access: Provider bis zum Kunden, z.B. PON\n- Long-Haul / Metro: Städte, Länder und Seekabel über sehr große Distanzen"
+		},
+		{
+			"id": "26-103-41465697219700_O/J", 
+			"tags": ["LF 3.0: CCNA", "Bitübertragungsschicht", "Netzwerke"], 
+			"lernfeld": "LF 3.0: CCNA", 
+			"frage": "Nach welchen 4 Kriterien wird die Qualität einer Netzwerk-Verbindung bewertet?", 
+			"antwort": "- Bandbreite (theoretische Datenrate pro Zeit)\n- Latenz (Zeit von Quelle zu Ziel)\n- Throughput (Gemessene Datenrate pro Zeit)\n- Goodput (Nutzbare Datenrate pro Zeit)"
 		}
 	]
 }

@@ -26,7 +26,7 @@
                 <padding>
                     <Insets top="40" bottom="40"/>
                 </padding>
-                <Button text="Neues Set erstellen" prefWidth="200">
+                <Button text="Neues Set erstellen" prefWidth="200" fx:id="buttonNeuesSet" onAction="#testObservableMap">
                     <font>
                         <Font size="15" />
                     </font>
