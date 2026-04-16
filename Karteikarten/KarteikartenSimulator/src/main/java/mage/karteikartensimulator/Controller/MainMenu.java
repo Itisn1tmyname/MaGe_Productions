@@ -2,12 +2,15 @@ package mage.karteikartensimulator.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Font;
+import javafx.stage.*;
 import mage.karteikartensimulator.Datenmodell.Data;
 import mage.karteikartensimulator.Datenmodell.KarteiSet;
+import mage.karteikartensimulator.Datenmodell.Profil;
 import mage.karteikartensimulator.Main;
 
 import java.io.IOException;
@@ -63,6 +66,27 @@ public class MainMenu {
         } else if (result.isPresent() && result.get() == ButtonType.CANCEL) {
             //TODO: Is das nötig?
             System.out.println("CANCEL pressed.");
+        }
+    }
+
+    @FXML
+    public void handleStart() {
+        //TODO: frage nach gewünschten Sortier- oder Filterfunktionen
+        //TODO: Rufe ein neues Fenster mit erster Frage... usw.
+        if (selectedSet == null || selectedSet.getKarten().isEmpty()) return;
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiFrage.fxml"));
+        Stage stage = new Stage();
+//        stage.setAlwaysOnTop(true);
+//        stage.initStyle(StageStyle.UNDECORATED);
+//        stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
+        try {
+            stage.setScene(new Scene(loader.load()));
+            Frage frage = loader.getController();
+            frage.starten(selectedSet.getKarten(), stage);
+            stage.show();
+        } catch (IOException ignored) {
+            //TODO
         }
     }
 

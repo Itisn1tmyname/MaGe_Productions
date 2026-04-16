@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import mage.karteikartensimulator.Datenmodell.Data;
 import mage.karteikartensimulator.Datenmodell.KarteiSet;
 import mage.karteikartensimulator.Datenmodell.Karteikarte;
@@ -44,6 +45,8 @@ public class Main extends Application {
 
         stage.setTitle("Karteikarten Simulator ver. " + VERSION);
         stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
+//        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(fxmlLoader.load()));
         Main.stage = stage;
         stage.show();

@@ -66,19 +66,22 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
                     <ColumnConstraints halignment="RIGHT"/>
                 </columnConstraints>
 
-                <Button text="Frage richtig beantwortet" GridPane.columnIndex="0" prefWidth="300" fx:id="buttonAntwortRichtig">
+                <Button text="Frage richtig beantwortet" GridPane.columnIndex="0" prefWidth="300"
+                        fx:id="buttonAntwortRichtig" onAction="#handleRichtig">
                     <font>
                         <Font name="System bold" size="20"/>
                     </font>
                 </Button>
 
-                <Button text="Frage nicht werten..." GridPane.columnIndex="1" prefWidth="300" fx:id="buttonAntwortNichtWerten">
+                <Button text="Frage nicht werten..." GridPane.columnIndex="1" prefWidth="300" defaultButton="true"
+                        fx:id="buttonAntwortNichtWerten" onAction="#handleNichtWerten">
                     <font>
                         <Font name="System bold" size="20"/>
                     </font>
                 </Button>
 
-                <Button text="Falsch beantwortet" GridPane.columnIndex="2" prefWidth="300" fx:id="buttonAntwortFalsch">
+                <Button text="Falsch beantwortet" GridPane.columnIndex="2" prefWidth="300"
+                        fx:id="buttonAntwortFalsch" onAction="#handleFalsch">
                     <font>
                         <Font name="System bold" size="20"/>
                     </font>

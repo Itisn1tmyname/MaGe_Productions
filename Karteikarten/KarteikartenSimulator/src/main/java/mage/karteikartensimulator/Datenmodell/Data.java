@@ -116,6 +116,7 @@ public class Data {
     }
 
     public static void populate(String fileName) throws Exception{
+        //TODO: Change hardcoded values
         Path path = Path.of(CONFIG_DIRECTORY + fileName);
         switch (fileName) {
             case SET_ALLE_FILENAME: {
