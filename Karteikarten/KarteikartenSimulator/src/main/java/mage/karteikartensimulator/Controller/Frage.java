@@ -1,13 +1,19 @@
 package mage.karteikartensimulator.Controller;
 
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import mage.karteikartensimulator.Datenmodell.*;
 import mage.karteikartensimulator.Main;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -15,8 +21,7 @@ import java.util.List;
 
 public class Frage {
 
-    //TODO: Change the list to not be hardcoded
-    private static final List<Karteikarte> KARTEN = Data.getInstance().getKartenSets().get("alle").getKarten();
+    //TODO: Fix fxml File - Schatten ist nicht durchsichtig!
 
     @FXML
     private Label labelLernfeld;
@@ -24,8 +29,6 @@ public class Frage {
     private Label labelFragentext;
     @FXML
     private Label labelHashtags;
-    @FXML
-    private Button buttonAntwortAnzeigen;
     @FXML
     private static Stage stage;
 
@@ -63,5 +66,10 @@ public class Frage {
             labelFragentext.setText(karte.getFrage().replace("\\n", "\n"));
             labelHashtags.setText(karte.getTagString());
         }
+    }
+
+    @FXML
+    public void handleClose() {
+        stage.close();
     }
 }

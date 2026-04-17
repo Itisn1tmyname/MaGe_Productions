@@ -9,89 +9,104 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="mage.karteikartensimulator.Controller.Frage"
-            prefHeight="750.0" prefWidth="1200.0">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="mage.karteikartensimulator.Controller.Frage"
+           prefHeight="750.0" prefWidth="1200.0"
+           style="-fx-background-insets: 12; -fx-background-radius: 6;
+                  -fx-effect: dropshadow(three-pass-box, dimgrey, 10, 0, 4, 4)">
+    <padding>
+        <Insets topRightBottomLeft="12"/>
+    </padding>
+    <BorderPane style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-width: 2; -fx-background-color: white"
+                VBox.vgrow="ALWAYS">
+        <top>
+            <!--Links: "Frage", Rechts: Lernfeld -->
+            <GridPane style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden"
+                      gridLinesVisible="false">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="10" halignment="LEFT"/>
+                    <ColumnConstraints percentWidth="80" halignment="CENTER"/>
+                    <ColumnConstraints percentWidth="10" halignment="RIGHT"/>
+                </columnConstraints>
 
-    <top>
-        <!--Links: "Frage", Rechts: Lernfeld -->
-        <GridPane style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden"
-                  gridLinesVisible="false">
-            <columnConstraints>
-                <ColumnConstraints percentWidth="20" halignment="LEFT"/>
-                <ColumnConstraints percentWidth="80" halignment="RIGHT"/>
-            </columnConstraints>
-            <padding>
-                <Insets topRightBottomLeft="20"/>
-            </padding>
+                <Label text="Frage">
+                    <padding>
+                        <Insets topRightBottomLeft="20"/>
+                    </padding>
+                    <font>
+                        <Font name="System bold" size="20"/>
+                    </font>
+                </Label>
 
-            <Label text="Frage">
+                <Label text="LF X.X: Testfeld" GridPane.columnIndex="1" fx:id="labelLernfeld">
+                    <padding>
+                        <Insets topRightBottomLeft="20"/>
+                    </padding>
+                    <font>
+                        <Font name="System bold" size="20"/>
+                    </font>
+                </Label>
+
+                <Label onMouseClicked="#handleClose" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                    <padding>
+                        <Insets bottom="20"/>
+                    </padding>
+                    <graphic>
+                        <FontIcon iconLiteral="mdi2a-alpha-x:50"/>
+                    </graphic>
+                </Label>
+            </GridPane>
+        </top>
+
+        <center>
+            <!--Inhalt der Frage -->
+            <Label wrapText="true" fx:id="labelFragentext"
+                   text="Fragentext
+     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+     labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+     et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+     labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+     et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            >
                 <font>
-                    <Font name="System bold" size="20"/>
+                    <Font size="26"/>
                 </font>
+                <padding>
+                    <Insets topRightBottomLeft="40"/>
+                </padding>
             </Label>
-            <Label text="LF X.X: Testfeld" GridPane.columnIndex="1" fx:id="labelLernfeld">
-                <font>
-                    <Font name="System bold" size="20"/>
-                </font>
-            </Label>
-        </GridPane>
-    </top>
+        </center>
 
-    <center>
-        <!--Inhalt der Frage -->
-        <Label wrapText="true" fx:id="labelFragentext"
-               text="Fragentext
- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
- labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
- et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
- labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
- et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-        >
-            <font>
-                <Font size="26"/>
-            </font>
-            <padding>
-                <Insets topRightBottomLeft="40"/>
-            </padding>
-        </Label>
-    </center>
+        <bottom>
+            <!--Bottom_Left: Tags; Top_Right: Antwort Anzeigen -->
+            <GridPane style="-fx-border-width: 0; -fx-border-color: grey; -fx-border-style: solid hidden hidden hidden"
+                      gridLinesVisible="false">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="80" halignment="LEFT"/>
+                    <ColumnConstraints percentWidth="20" halignment="RIGHT"/>
+                </columnConstraints>
+                <padding>
+                    <Insets top="20" right="40" left="20" bottom="10"/>
+                </padding>
 
-    <bottom>
-        <!--Bottom_Left: Tags; Top_Right: Antwort Anzeigen -->
-        <GridPane style="-fx-border-width: 0; -fx-border-color: grey; -fx-border-style: solid hidden hidden hidden"
-                  gridLinesVisible="false">
-            <columnConstraints>
-                <ColumnConstraints percentWidth="80" halignment="LEFT"/>
-                <ColumnConstraints percentWidth="20" halignment="RIGHT"/>
-            </columnConstraints>
-            <padding>
-                <Insets top="20" right="40" left="20" bottom="10"/>
-            </padding>
+                <Label text="#Insert Hashtags here" GridPane.rowIndex="2" GridPane.rowSpan="2" fx:id="labelHashtags">
+                    <font>
+                        <Font size="15"/>
+                    </font>
+                </Label>
 
-            <Label text="#Insert Hashtags here" GridPane.rowIndex="2" GridPane.rowSpan="2" fx:id="labelHashtags">
-                <font>
-                    <Font size="15"/>
-                </font>
-            </Label>
+                <Button text="Antwort Anzeigen" GridPane.columnIndex="1" GridPane.rowSpan="2" fx:id="buttonAntwortAnzeigen"
+                        onAction="#handleAnzeigenButton">
+                    <font>
+                        <Font name="System bold" size="20"/>
+                    </font>
+                </Button>
 
-            <Button text="Antwort Anzeigen" GridPane.columnIndex="1" GridPane.rowSpan="2" fx:id="buttonAntwortAnzeigen"
-                    onAction="#handleAnzeigenButton">
-                <font>
-                    <Font name="System bold" size="20"/>
-                </font>
-            </Button>
-
-            <Label GridPane.rowIndex="0"/><Label GridPane.rowIndex="1"/><Label GridPane.rowIndex="2"/>
-        </GridPane>
-    </bottom>
-
-    <left>
-        <Label fx:id="labelAntworttext" visible="false"/>
-        <Button fx:id="buttonAntwortFalsch" visible="false"/>
-        <Button fx:id="buttonAntwortNichtWerten" visible="false"/>
-        <Button fx:id="buttonAntwortRichtig" visible="false"/>
-    </left>
-</BorderPane>
+                <Label GridPane.rowIndex="0"/><Label GridPane.rowIndex="1"/><Label GridPane.rowIndex="2"/>
+            </GridPane>
+        </bottom>
+    </BorderPane>
+</StackPane>

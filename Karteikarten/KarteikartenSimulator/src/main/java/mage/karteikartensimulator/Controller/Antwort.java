@@ -16,8 +16,7 @@ import java.util.List;
 
 public class Antwort {
 
-    //TODO: Change the list to not be hardcoded
-    private static final List<Karteikarte> KARTEN = Data.getInstance().getKartenSets().get("alle").getKarten();
+    //TODO: Fix fxml File - Schatten ist nicht durchsichtig!
 
     @FXML
     private Label labelLernfeld;
@@ -26,13 +25,9 @@ public class Antwort {
     @FXML
     private Label labelHashtags;
     @FXML
-    private Button buttonAntwortRichtig;
+    private static Stage stage;
     @FXML
     private Button buttonAntwortNichtWerten;
-    @FXML
-    private Button buttonAntwortFalsch;
-    @FXML
-    private static Stage stage;
 
     public static void setStage(Stage stage) {
         Antwort.stage = stage;
@@ -42,6 +37,7 @@ public class Antwort {
         labelLernfeld.setText(karte.getLernfeld().toString().replace("\"", ""));
         labelHashtags.setText(karte.getTagString());
         labelAntworttext.setText(karte.getAntwort().replace("\\n", "\n"));
+        buttonAntwortNichtWerten.requestFocus();
     }
 
     @FXML
@@ -75,5 +71,10 @@ public class Antwort {
         } else {
             stage.close();
         }
+    }
+
+    @FXML
+    public void handleClose() {
+        stage.close();
     }
 }

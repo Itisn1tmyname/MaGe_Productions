@@ -8,94 +8,117 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="mage.karteikartensimulator.Controller.Antwort"
-            prefHeight="750.0" prefWidth="1200.0">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="mage.karteikartensimulator.Controller.Antwort"
+           prefHeight="750.0" prefWidth="1200.0"
+           style="-fx-background-insets: 12; -fx-background-radius: 6;
+                  -fx-effect: dropshadow(three-pass-box, dimgrey, 10, 0, 4, 4)">
+    <padding>
+        <Insets topRightBottomLeft="12"/>
+    </padding>
+    <BorderPane style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-width: 2; -fx-background-color: white"
+                VBox.vgrow="ALWAYS">
 
-    <top>
-        <!--Links: "Antwort", Rechts: Lernfeld -->
-        <GridPane style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden"
-                  gridLinesVisible="false">
-            <columnConstraints>
-                <ColumnConstraints percentWidth="20" halignment="LEFT"/>
-                <ColumnConstraints percentWidth="80" halignment="RIGHT"/>
-            </columnConstraints>
-            <padding>
-                <Insets topRightBottomLeft="20"/>
-            </padding>
-
-            <Label text="Antwort">
-                <font>
-                    <Font name="System bold" size="20"/>
-                </font>
-            </Label>
-            <Label text="LF X.X: Testfeld" GridPane.columnIndex="1" fx:id="labelLernfeld">
-                <font>
-                    <Font name="System bold" size="20"/>
-                </font>
-            </Label>
-        </GridPane>
-    </top>
-
-    <center>
-        <!--Inhalt der Antwort -->
-        <Label wrapText="true" fx:id="labelAntworttext"
-               text="Antworttext
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
-            <font>
-                <Font size="26"/>
-            </font>
-            <padding>
-                <Insets topRightBottomLeft="40"/>
-            </padding>
-        </Label>
-    </center>
-
-    <bottom>
-        <!--Bottom_Top: Richtig/Nicht-werten/Falsch; Bottom_Bottom: Tags-->
-        <VBox>
-            <padding>
-                <Insets top="20" right="40" left="20" bottom="10"/>
-            </padding>
-            <GridPane style="-fx-border-width: 0; -fx-border-color: grey; -fx-border-style: solid hidden hidden hidden"
-                      gridLinesVisible="false" hgap="50" alignment="CENTER">
+        <top>
+            <!--Links: "Antwort", Rechts: Lernfeld -->
+            <GridPane style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden"
+                      gridLinesVisible="false">
                 <columnConstraints>
-                    <ColumnConstraints halignment="LEFT"/>
-                    <ColumnConstraints percentWidth="33.3" halignment="CENTER"/>
-                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints percentWidth="15" halignment="LEFT"/>
+                    <ColumnConstraints percentWidth="70" halignment="CENTER"/>
+                    <ColumnConstraints percentWidth="15" halignment="RIGHT"/>
                 </columnConstraints>
 
-                <Button text="Frage richtig beantwortet" GridPane.columnIndex="0" prefWidth="300"
-                        fx:id="buttonAntwortRichtig" onAction="#handleRichtig">
+                <Label text="Antwort">
+                    <padding>
+                        <Insets topRightBottomLeft="20"/>
+                    </padding>
                     <font>
                         <Font name="System bold" size="20"/>
                     </font>
-                </Button>
+                </Label>
 
-                <Button text="Frage nicht werten..." GridPane.columnIndex="1" prefWidth="300" defaultButton="true"
-                        fx:id="buttonAntwortNichtWerten" onAction="#handleNichtWerten">
+                <Label text="LF X.X: Testfeld" GridPane.columnIndex="1" fx:id="labelLernfeld">
+                    <padding>
+                        <Insets topRightBottomLeft="20"/>
+                    </padding>
                     <font>
                         <Font name="System bold" size="20"/>
                     </font>
-                </Button>
+                </Label>
 
-                <Button text="Falsch beantwortet" GridPane.columnIndex="2" prefWidth="300"
-                        fx:id="buttonAntwortFalsch" onAction="#handleFalsch">
-                    <font>
-                        <Font name="System bold" size="20"/>
-                    </font>
-                </Button>
+                <Label onMouseClicked="#handleClose" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                    <padding>
+                        <Insets bottom="20"/>
+                    </padding>
+                    <graphic>
+                        <FontIcon iconLiteral="mdi2a-alpha-x:50"/>
+                    </graphic>
+                </Label>
             </GridPane>
-            <Label text="#Put your Tags here, damnit!" fx:id="labelHashtags">
+        </top>
+
+        <center>
+            <!--Inhalt der Antwort -->
+            <Label wrapText="true" fx:id="labelAntworttext"
+                   text="Antworttext
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
                 <font>
-                    <Font size="18"/>
+                    <Font size="26"/>
                 </font>
                 <padding>
-                    <Insets left="20" bottom="10" top="20"/>
+                    <Insets topRightBottomLeft="40"/>
                 </padding>
             </Label>
-        </VBox>
-    </bottom>
+        </center>
 
-</BorderPane>
+        <bottom>
+            <!--Bottom_Top: Richtig/Nicht-werten/Falsch; Bottom_Bottom: Tags-->
+            <VBox>
+                <padding>
+                    <Insets top="20" right="40" left="20" bottom="10"/>
+                </padding>
+                <GridPane style="-fx-border-width: 0; -fx-border-color: grey; -fx-border-style: solid hidden hidden hidden"
+                          gridLinesVisible="false" hgap="50" alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT"/>
+                        <ColumnConstraints percentWidth="33.3" halignment="CENTER"/>
+                        <ColumnConstraints halignment="RIGHT"/>
+                    </columnConstraints>
+
+                    <Button text="Frage richtig beantwortet" GridPane.columnIndex="0" prefWidth="300"
+                            fx:id="buttonAntwortRichtig" onAction="#handleRichtig">
+                        <font>
+                            <Font name="System bold" size="20"/>
+                        </font>
+                    </Button>
+
+                    <Button text="Frage nicht werten..." GridPane.columnIndex="1" prefWidth="300"
+                            fx:id="buttonAntwortNichtWerten" onAction="#handleNichtWerten">
+                        <font>
+                            <Font name="System bold" size="20"/>
+                        </font>
+                    </Button>
+
+                    <Button text="Falsch beantwortet" GridPane.columnIndex="2" prefWidth="300"
+                            fx:id="buttonAntwortFalsch" onAction="#handleFalsch">
+                        <font>
+                            <Font name="System bold" size="20"/>
+                        </font>
+                    </Button>
+                </GridPane>
+                <Label text="#Put your Tags here, damnit!" fx:id="labelHashtags">
+                    <font>
+                        <Font size="18"/>
+                    </font>
+                    <padding>
+                        <Insets left="20" bottom="10" top="20"/>
+                    </padding>
+                </Label>
+            </VBox>
+        </bottom>
+
+    </BorderPane>
+</StackPane>

@@ -4,8 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.*;
 import mage.karteikartensimulator.Datenmodell.Data;
@@ -76,8 +78,10 @@ public class MainMenu {
         if (selectedSet == null || selectedSet.getKarten().isEmpty()) return;
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiFrage.fxml"));
         Stage stage = new Stage();
-//        stage.setAlwaysOnTop(true);
-//        stage.initStyle(StageStyle.UNDECORATED);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initOwner(mainBorderPane.getScene().getWindow());
+        stage.setAlwaysOnTop(true);
+        stage.initStyle(StageStyle.UNDECORATED);
 //        stage.setFullScreen(true);
         stage.setFullScreenExitHint("");
         try {
