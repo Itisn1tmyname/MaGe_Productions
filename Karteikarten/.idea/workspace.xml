@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Set anzeigen möglich">
-      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Karten/alle.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Karten/alle.json" afterDir="false" />
-    </list>
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +19,12 @@
     &quot;assignee&quot;: &quot;Itisn1tmyname&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Itisn1tmyname/MaGe_Productions",
-    "accountId": "f0109677-bc48-4a5c-97db-bb7d90a5d01b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Itisn1tmyname/MaGe_Productions&quot;,
+    &quot;accountId&quot;: &quot;2855185a-5b5e-40aa-aeb7-c4a14ce21f36&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
   &quot;fromUser&quot;: false
@@ -39,22 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;X:/Git_Repository/MaGe_Productions/Karteikarten&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "X:/Git_Repository/MaGe_Productions/Karteikarten",
+    "settings.editor.selected.configurable": "proofread",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mage.karteikartensimulator.Main" />
@@ -83,8 +80,6 @@
       <option name="presentableId" value="Default" />
       <updated>1776067277834</updated>
       <workItem from="1776067284939" duration="8311000" />
-      <workItem from="1776328446087" duration="6878000" />
-      <workItem from="1776404728457" duration="8561000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
       <option name="closed" value="true" />
@@ -102,13 +97,13 @@
       <option name="project" value="LOCAL" />
       <updated>1776069823304</updated>
     </task>
-    <task id="LOCAL-00003" summary="Set anzeigen möglich">
+    <task id="LOCAL-00003" summary="Ausgeben aller eingelesenen KarteiSets als ToggleButton in der Startansicht.">
       <option name="closed" value="true" />
-      <created>1776344240433</created>
+      <created>1776108932023</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1776344240433</updated>
+      <updated>1776108932023</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -130,7 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Erstellen: wrapText=true" />
     <MESSAGE value="Frage/Antwort input Zeilenumbruch ermöglicht" />
-    <MESSAGE value="Set anzeigen möglich" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set anzeigen möglich" />
+    <MESSAGE value="Ausgeben aller eingelesenen KarteiSets als ToggleButton in der Startansicht." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ausgeben aller eingelesenen KarteiSets als ToggleButton in der Startansicht." />
   </component>
 </project>
