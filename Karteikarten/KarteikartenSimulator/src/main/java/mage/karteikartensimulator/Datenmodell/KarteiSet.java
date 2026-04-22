@@ -10,7 +10,6 @@ public class KarteiSet {
     private String info;
     private ArrayList<Karteikarte> karten;
 
-    //TODO: JSON anpassen, wenn Karten als Map mit Key->Value übergeben werden!
     public static final Pattern setPattern = Pattern.compile("\\s*\\{\\s*\"name\": \"(?<name>.+)\",\\s*"
             + "\"info\": \"(?<info>.+)\",\\s*\"karten\": \\[\\s*(?<karten>[\\s\\S]*)]\\s*}\\s*");
 

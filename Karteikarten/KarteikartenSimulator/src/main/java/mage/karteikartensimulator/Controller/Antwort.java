@@ -31,11 +31,14 @@ public class Antwort {
     @FXML
     private Button buttonAntwortNichtWerten;
 
+    private Karteikarte karte;
+
     public static void setStage(Stage stage) {
         Antwort.stage = stage;
     }
 
     public void setContent(Karteikarte karte){
+        this.karte = karte;
         labelLernfeld.setText(karte.getLernfeld().toString().replace("\"", ""));
         labelHashtags.setText(karte.getTagString());
         labelAntworttext.setText(karte.getAntwort().replace("\\n", "\n"));
@@ -49,13 +52,15 @@ public class Antwort {
 
     @FXML
     public void handleRichtig() {
-        //TODO: Karte werten! Wertung über Profil...
+        Data.getInstance().getActiveProfil().stufeSteigern(karte.getId());
+//        System.out.println(Data.getInstance().getActiveProfil().getStufe(karte.getId()));
         next();
     }
 
     @FXML
     public void handleFalsch() {
-        //TODO:Karte werten! Profil...
+        Data.getInstance().getActiveProfil().stufeKleiner(karte.getId());
+//        System.out.println(Data.getInstance().getActiveProfil().getStufe(karte.getId()));
         next();
     }
 

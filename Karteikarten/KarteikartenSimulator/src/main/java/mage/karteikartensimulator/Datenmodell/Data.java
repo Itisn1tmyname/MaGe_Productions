@@ -27,10 +27,10 @@ public class Data {
     public static final DateTimeFormatter ID_FORMATTER = DateTimeFormatter.ofPattern("yy-D-NNNN");
     public static final DateTimeFormatter PROFIL_FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm");
 
-    //TODO: Make these collections observable. Instantiate with FXCollections.observable...
-    private static final ObservableMap<String, KarteiSet> kartenSets = FXCollections.observableHashMap();
-    private static final ObservableMap<String, Profil> profile = FXCollections.observableHashMap();
-    private static final Einstellungen einstellungen = new Einstellungen();
+    private static final Map<String, KarteiSet> kartenSets = new HashMap<>();
+    private static final Map<String, Profil> profile = new HashMap<>();
+    private static Profil activeProfil;
+    private static final Einstellungen einstellungen = new Einstellungen(); //TODO
 
     //TODO: Booleans für Zustand der Daten: Hat der Nutzer eine Änderung vorgenommen?
 
@@ -44,6 +44,10 @@ public class Data {
 
     public Map<String, Profil> getProfile() {
         return profile;
+    }
+
+    public Profil getActiveProfil() {
+        return activeProfil;
     }
 
     //TODO: Speichere nicht nur Kartensets, sondern auch Profile und Einstellungen
@@ -92,7 +96,9 @@ public class Data {
     }
 
     private void profileLaden(){
-        //TODO
+        //TODO: Non-hardcoded Profil, alle Profile statt nur Standard.
+        profile.put("standard", new Profil("standard", new HashMap<>()));
+        activeProfil = profile.get("standard");
     }
 
     private void configLaden() {
