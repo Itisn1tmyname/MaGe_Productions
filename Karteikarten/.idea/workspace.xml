@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Karteikarten Styling - fixed shadow problem">
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Wertung der Karten (Richtig/Falsch)">
+      <change afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Antwort.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/Antwort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/KarteiSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/KarteiSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiAntwort.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiAntwort.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Profil.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Profil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -93,7 +97,7 @@
       <workItem from="1776328446087" duration="6878000" />
       <workItem from="1776404728457" duration="8599000" />
       <workItem from="1776843130381" duration="17000" />
-      <workItem from="1776843173699" duration="6404000" />
+      <workItem from="1776843173699" duration="9121000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
       <option name="closed" value="true" />
@@ -143,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776857150606</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Wertung der Karten (Richtig/Falsch)">
+      <option name="closed" value="true" />
+      <created>1776859356413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1776859356413</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +179,7 @@
     <MESSAGE value="Karteikarten Styling" />
     <MESSAGE value="Karteikarten Styling -" />
     <MESSAGE value="Karteikarten Styling - fixed shadow problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Karteikarten Styling - fixed shadow problem" />
+    <MESSAGE value="Wertung der Karten (Richtig/Falsch)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wertung der Karten (Richtig/Falsch)" />
   </component>
 </project>
