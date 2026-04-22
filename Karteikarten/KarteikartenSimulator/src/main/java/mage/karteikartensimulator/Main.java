@@ -3,6 +3,10 @@ package mage.karteikartensimulator;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import mage.karteikartensimulator.Datenmodell.Data;
@@ -23,13 +27,6 @@ public class Main extends Application {
 
 
     private static final String VERSION = "0.1";
-    private Profil profil;
-    private HashMap<String, Karteikarte> masterMap;
-    private ArrayList<KarteiSet> sets;
-    public static Stage stage;
-
-    //TODO: Booleans für Zustand der Daten: Hat der Nutzer eine Änderung vorgenommen?
-
 
 
     @Override
@@ -48,7 +45,6 @@ public class Main extends Application {
         stage.setFullScreenExitHint("");
 //        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(fxmlLoader.load()));
-        Main.stage = stage;
         stage.show();
     }
 
@@ -80,17 +76,5 @@ public class Main extends Application {
     @Override
     public void stop() throws Exception {
         Data.getInstance().datenSpeichern();
-    }
-
-    public Profil getProfil() {
-        return profil;
-    }
-
-    public HashMap<String, Karteikarte> getMasterMap() {
-        return masterMap;
-    }
-
-    public ArrayList<KarteiSet> getSets() {
-        return sets;
     }
 }

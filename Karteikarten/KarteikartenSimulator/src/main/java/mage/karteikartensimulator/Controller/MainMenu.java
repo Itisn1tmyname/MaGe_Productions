@@ -74,18 +74,18 @@ public class MainMenu {
     @FXML
     public void handleStart() {
         //TODO: frage nach gewünschten Sortier- oder Filterfunktionen
-        //TODO: Rufe ein neues Fenster mit erster Frage... usw.
         if (selectedSet == null || selectedSet.getKarten().isEmpty()) return;
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiFrage.fxml"));
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(mainBorderPane.getScene().getWindow());
         stage.setAlwaysOnTop(true);
-        stage.initStyle(StageStyle.UNDECORATED);
 //        stage.setFullScreen(true);
         stage.setFullScreenExitHint("");
         try {
             stage.setScene(new Scene(loader.load()));
+            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.getScene().setFill(Color.TRANSPARENT);
             Frage frage = loader.getController();
             frage.starten(selectedSet.getKarten(), stage);
             stage.show();

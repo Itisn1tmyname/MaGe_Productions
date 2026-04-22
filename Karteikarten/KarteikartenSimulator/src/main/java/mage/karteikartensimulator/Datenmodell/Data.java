@@ -32,6 +32,8 @@ public class Data {
     private static final ObservableMap<String, Profil> profile = FXCollections.observableHashMap();
     private static final Einstellungen einstellungen = new Einstellungen();
 
+    //TODO: Booleans für Zustand der Daten: Hat der Nutzer eine Änderung vorgenommen?
+
     private Data() {}
 
     public static Data getInstance() { return instance;}
