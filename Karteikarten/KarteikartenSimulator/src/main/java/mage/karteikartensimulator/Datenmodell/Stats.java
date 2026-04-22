@@ -4,33 +4,44 @@ import java.time.LocalDateTime;
 
 public class Stats {
 
-    private String name;
+    private String id;
     private Integer evaluation;
     private LocalDateTime dateLastChecked;
     private LocalDateTime dateLastRichtig;
 
+    /**
+     *
+     * @param json - this Constructor takes a String in json-format as follows:
+     *             {
+     *                "id": "26-101-39189196882900_P/W",
+     *                "evaluation": 0,
+     *                "dateLastChecked": "2026.04.22 14:09",
+     *                "dateLastRichtig": "2026.04.22 14:09"
+     *             }
+     */
     public Stats(String json){
         //TODO
     }
 
-    public Stats(String name, Integer evaluation, LocalDateTime dateLastChecked, LocalDateTime dateLastRichtig) {
-        this.name = name;
+    public Stats(String id, Integer evaluation, LocalDateTime dateLastChecked, LocalDateTime dateLastRichtig) {
+        this.id = id;
         this.evaluation = evaluation;
         this.dateLastChecked = dateLastChecked;
         this.dateLastRichtig = dateLastRichtig;
     }
 
-    public Stats(String name, Integer evaluation) {
-        this(name, evaluation, LocalDateTime.now(), LocalDateTime.now().minusYears(20));
+    public Stats(String id, Integer evaluation) {
+        this(id, evaluation, LocalDateTime.now(), LocalDateTime.now().minusYears(20));
     }
 
     @Override
     public String toString() {
-        return '\"'+ name +"\": {" +
+        return '{' +
+                " \n\t\"id\": \"" + id + "\"," +
                 " \n\t\"evaluation\": " + evaluation +
                 ", \n\t\"dateLastChecked\": \"" + dateLastChecked.format(Data.PROFIL_FORMATTER) + '\"' +
                 ", \n\t\"dateLastRichtig\": \"" + dateLastRichtig.format(Data.PROFIL_FORMATTER) + '\"' +
-                "\n}";
+                '}';
     }
 
 
@@ -42,8 +53,8 @@ public class Stats {
         evaluation = (evaluation > 0) ? 0 : evaluation - 1;
     }
 
-    public String name() {
-        return name;
+    public String id() {
+        return id;
     }
 
     public Integer evaluation() {

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Wertung der Karten (Richtig/Falsch)">
-      <change afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Datenmodell Improvement">
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Profil.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Profil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Stats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1776328446087" duration="6878000" />
       <workItem from="1776404728457" duration="8599000" />
       <workItem from="1776843130381" duration="17000" />
-      <workItem from="1776843173699" duration="9121000" />
+      <workItem from="1776843173699" duration="10202000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
       <option name="closed" value="true" />
@@ -155,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776859356413</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Datenmodell Improvement">
+      <option name="closed" value="true" />
+      <created>1776862049890</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1776862049890</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +187,7 @@
     <MESSAGE value="Karteikarten Styling -" />
     <MESSAGE value="Karteikarten Styling - fixed shadow problem" />
     <MESSAGE value="Wertung der Karten (Richtig/Falsch)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wertung der Karten (Richtig/Falsch)" />
+    <MESSAGE value="Datenmodell Improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Datenmodell Improvement" />
   </component>
 </project>

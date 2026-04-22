@@ -17,12 +17,13 @@ public class Profil {
      *                "name": "standard",
      *                "istAktivesProfil": true,
      *                "stats": [
-     *                   "ID-1": {
+     *                   {
+     *                      "id": "ID-1",
      *                      "evaluation": 0,
      *                      "dateLastChecked": "2026.04.22 14:09",
-     *      *               "dateLastRichtig": "2026.04.22 14:09"
+     *                      "dateLastRichtig": "2026.04.22 14:09"
      *                   },
-     *                   "ID-2": {...},
+     *                   {...},
      *                   ...
      *                ]
      *             }
