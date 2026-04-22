@@ -11,6 +11,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import mage.karteikartensimulator.Datenmodell.*;
 import mage.karteikartensimulator.Main;
 import org.kordamp.ikonli.javafx.FontIcon;
@@ -43,7 +44,10 @@ public class Frage {
     public void handleAnzeigenButton() {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiAntwort.fxml"));
         try {
+            stage.hide();
             stage.setScene(new Scene(loader.load()));
+//            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.getScene().setFill(Color.TRANSPARENT);
             Antwort antwort = loader.getController();
             antwort.setContent(karte);
             stage.show();

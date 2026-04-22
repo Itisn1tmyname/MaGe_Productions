@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import mage.karteikartensimulator.Datenmodell.Data;
 import mage.karteikartensimulator.Datenmodell.Karteikarte;
 import mage.karteikartensimulator.Main;
@@ -61,7 +63,9 @@ public class Antwort {
         if (Frage.hasNext()) {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiFrage.fxml"));
             try {
+                stage.hide();
                 stage.setScene(new Scene(loader.load()));
+                stage.getScene().setFill(Color.TRANSPARENT);
                 Frage frage = loader.getController();
                 frage.setContent();
                 stage.show();
