@@ -29,6 +29,55 @@
 			"lernfeld": "LF 3.0: CCNA", 
 			"frage": "Nach welchen 4 Kriterien wird die Qualität einer Netzwerk-Verbindung bewertet?", 
 			"antwort": "- Bandbreite (theoretische Datenrate pro Zeit)\n- Latenz (Zeit von Quelle zu Ziel)\n- Throughput (Gemessene Datenrate pro Zeit)\n- Goodput (Nutzbare Datenrate pro Zeit)"
+		},
+		{
+			"id": "26-111-69645622066722_G/I", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "Bedürfnisse", "Grundlagen", "wichtig"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was ist ein Bedürfnis und welche Arten von Bedürfnissen gibt es?", 
+			"antwort": "Ein Bedürfnis ist ein subjektiv empfundener Mangel, verbunden mit dem Wunsch, diesen zu beheben.\nMan kann Bedürfnisse nach Inhalt oder nach Träger/Quelle unterscheiden.\n\nExistenzbedürfnisse (z.B. Nahrung, Schlaf)\nKulturbedürfnisse (z.B. Bildung, Kommunikation)\nLuxusbedürfnisse (z.B. Luxusreisen, Markenkleidung)\n\nIndividualbedürfnisse -> vom Einzelnen erfüllbar\nKollektivbedürfnisse -> entstehen durch viele gleichartige Individualbedürfnisse (z.B. Verkehrswege, IT-Infrastruktur)"
+		},
+		{
+			"id": "26-111-69951897297344_I/M", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "Grundlagen", "Bedürfnisse"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was ist die Maßlow'sche Bedürfnispyramide und wie sieht sie aus?", 
+			"antwort": "Die Maßlow'sche Bedürfnispyramide ist ein Modell zur Darstellung von Bedürfnissen, und wie diese aufeinander aufbauen. Erst wenn die unterste Stufe, die Existenz- / Physiologischen Bedürfnisse erfüllt sind, so das Modell, werden die nachfolgenden, höhergelegenen Bedürfnisse erfüllt.\n\nVon oben nach unten besteht die Pyramide aus:\n\nSelbstverwirklichung\nWertschätzungsbedüfnisse\nSoziale Bedürfnisse\nSicherheitsbedürfnisse\nPhysiologische / Existenzbedürfnisse"
+		},
+		{
+			"id": "26-111-70235842986511_T/D", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "Bedürfnisse", "Grundlagen", "wichtig"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was ist der Zusammenhang zwischen Bedürfnis, Bedarf und Nachfrage?", 
+			"antwort": "Ein Bedürfnis ist ein (subjektiver) Mangel und der Wunsch, diesen zu beheben. Ist ein Bedürfnis mit Kaufkraft verbunden, also ausreichend Kapital verhanden, um dieses Bedürfnis zu befriedigen, entsteht ein Bedarf. Bedürfnisse, die nicht durch den Einsatz von Geld behoben werden können (z.B. immaterielle Bedürfnisse nach Freundschaft, (romantische) Liebe), können auch keinen Bedarf entstehen lassen.\nEine Nachfrage entsteht, wenn ein Bedarf am Markt wirksam wird, z.B durch eine Kaufhandlung."
+		},
+		{
+			"id": "26-111-70690670336476_K/T", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "Güter", "Grundlagen", "wichtig"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was sind Güter und welche Arten von Gütern (nach Verfügbarkeit, Beschaffenheit, Verwendungszweck unterteilt) gibt es?", 
+			"antwort": "Güter sind Mittel zur Bedürfnisbefriedigung. Freie Güter sind unbegrenzt und kostenlos verfügbar (Luft, Sonnenlicht), Wirtschaftliche Güter sind begrenzt und müssen produziert werden. Sie sind knapp und haben einen wirtschaftlichen Wert.\nWeiterhin wird zwischen materiellen und immateriellen, sowie zwischen Konsum- und Produktionsgütern unterschieden. Materielle Güter (Sachgüter) sind physisch greifbar, immaterielle Güter (Rechte und Dienstleistungen) sind das nicht. Konsumgüter dienen dem unmittelbaren Verbrauch, Produktionsgüter werden in der Herstellung von anderen Gütern genutzt."
+		},
+		{
+			"id": "26-111-71009920526548_A/N", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "ökonomisches Prinzip", "Grundlagen"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was ist das Ökonomische Prinzip?", 
+			"antwort": "Das Spannungsverhältnis zwischen unbegrenzten Bedürfnissen und begrenzten Gütern führt zu wirtschaftlichen Handeln. Das ökonomische Prinzip ist das rationale Handeln mit knappen Mitteln. Man unterscheidet zwischen Minimal- und Maximalprinzip.\n\nMinimalprinzip: mit möglichst wenig Einsatz soll ein gegebenes Ziel erreicht werden.\nMaximalprinzip: aus gegebenen Mitteln soll der größtmögliche Nutzen gezogen werden."
+		},
+		{
+			"id": "26-111-71332696997565_L/I", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "Unternehmen", "Grundlagen"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was ist ein Unternehmen?", 
+			"antwort": "Ein Unternehmen ist eine wirtschaftliche Einheit, die Güter oder Dienstleistungen anbietet, mit dem Ziel, Bedürfnisse von Kundinnen und Kunden zu befriedigen."
+		},
+		{
+			"id": "26-111-71545449663976_X/P", 
+			"tags": ["LF 1.1: Rolle im Betrieb", "Unternehmen", "Ziele", "Grundlagen"], 
+			"lernfeld": "LF 1.1: Rolle im Betrieb", 
+			"frage": "Was sind Unternehmensziele?", 
+			"antwort": "Unternehmensziele sind geplante Ergebnisse, die den Handlungsrahmen eines Unternehmens bestimmen.\nSie geben Orientierung, flefen bei Entscheidungen und motivieren Mitarbeitende. Sie können ökonomisch, ökologisch, und/oder sozial sein."
 		}
 	]
 }
