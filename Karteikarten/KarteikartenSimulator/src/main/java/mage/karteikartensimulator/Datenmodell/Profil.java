@@ -1,8 +1,7 @@
 package mage.karteikartensimulator.Datenmodell;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,9 +38,14 @@ public class Profil {
 
         if (matcher.matches()) {
             this.stats = new HashMap<>();
-            Matcher statMatcher = Stats.statPattern.matcher(matcher.group("stats"));
-            while (statMatcher.find()) {
-                stats.put(statMatcher.group("id"), new Stats(statMatcher.group()));
+            String stats = matcher.group("stats");
+            if (!stats.trim().isEmpty()) {
+                String[] statArray = stats.split("},");
+                for (int i = 0; i < statArray.length; i++) {
+                    Matcher statMatcher = Stats.statPattern.matcher(i < statArray.length - 1  ? statArray[i] + "}" : statArray[i]);
+                    if (statMatcher.matches())
+                        this.stats.put(statMatcher.group("id"), new Stats(statMatcher.group()));
+                }
             }
             this.name = matcher.group("name");
             this.istAktivesProfil = matcher.group("aktiv").equals("true");
@@ -56,13 +60,17 @@ public class Profil {
 
     @Override
     public String toString() {
-
-        System.out.println("Achtung! Profil.toString() ist derzeit fehlerhaft, stats werden nicht ordnungsgemäß übersetzt!");
-
-        return '{' +
-                "\"name\": \"" + name + '\"' +
-                ", \"stats\": " + stats +
-                '}';
+        StringBuilder stats = new StringBuilder("\n");
+        Iterator<Stats> i = this.stats.values().iterator();
+        while (i.hasNext()){
+            stats.append(i.next().toString());
+            if (i.hasNext()) stats.append(",\n");
+        }
+        return "{" +
+                "\n\t\"name\": \"" + name + '\"' +
+                ", \n\t\"istAktivesProfil\": " + istAktivesProfil +
+                ", \n\t\"stats\": [" + stats.toString().replace("\n", "\n\t\t") +
+                "\n\t]\n}";
     }
 
     public int getStufe(String kartenID){
@@ -81,5 +89,9 @@ public class Profil {
 
     public Stats getStats(String kartenID){
         return stats.get(kartenID);
+    }
+
+    public boolean istAktiv(){
+        return istAktivesProfil;
     }
 }

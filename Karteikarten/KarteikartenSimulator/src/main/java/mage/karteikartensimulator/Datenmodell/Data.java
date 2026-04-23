@@ -29,7 +29,7 @@ public class Data {
 
     private static final Map<String, KarteiSet> kartenSets = new HashMap<>();
     private static final Map<String, Profil> profile = new HashMap<>();
-    private static Profil activeProfil;
+    private static Profil aktivesProfil;
     private static final Einstellungen einstellungen = new Einstellungen(); //TODO
 
     //TODO: Booleans für Zustand der Daten: Hat der Nutzer eine Änderung vorgenommen?
@@ -47,7 +47,7 @@ public class Data {
     }
 
     public Profil getActiveProfil() {
-        return activeProfil;
+        return aktivesProfil;
     }
 
     //TODO: Speichere nicht nur Kartensets, sondern auch Profile und Einstellungen
@@ -65,8 +65,11 @@ public class Data {
         }
     }
 
-    private void profileSpeichern() {
+    private void profileSpeichern() throws IOException{
         //TODO: Speichern nur, wenn bestimmter Boolean (haben sich die Daten geändert?) true ist...
+        try (BufferedWriter bw = Files.newBufferedWriter(Paths.get(CONFIG_DIRECTORY + PROFIL_STANDARD_FILENAME))) {
+            bw.write(profile.get("standard").toString());
+        }
     }
 
     private void configSpeichern() {
@@ -81,6 +84,7 @@ public class Data {
 
     private void kartenLaden(){
         //TODO: Nicht nur alle.json laden, sondern in einer Schleife sämtliche im Ordner Karten enthaltene .json files durchgehen...
+        //TODO: Wenn alle.json zwar existiert, aber empty ist oder nicht matched - durch Standard-File ersetzen!
         StringBuilder sb = new StringBuilder();
         try (BufferedReader br = Files.newBufferedReader(Paths.get(CONFIG_DIRECTORY + SET_ALLE_FILENAME))) {
             String input;
@@ -96,9 +100,18 @@ public class Data {
     }
 
     private void profileLaden(){
-        //TODO: Non-hardcoded Profil, alle Profile statt nur Standard.
-        profile.put("standard", new Profil("standard", new HashMap<>()));
-        activeProfil = profile.get("standard");
+        //TODO: Alle Profile statt nur Standard.
+        StringBuilder sb = new StringBuilder();
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(CONFIG_DIRECTORY + PROFIL_STANDARD_FILENAME))){
+            String input;
+            while((input = br.readLine()) != null) sb.append(input);
+            Profil profil = new Profil(sb.toString());
+            profile.put("standard", profil);
+            if (profil.istAktiv()) aktivesProfil = profil;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Exception in Data.profileLaden()!");
+        }
     }
 
     private void configLaden() {
@@ -220,44 +233,9 @@ public class Data {
                 try (BufferedWriter bw = Files.newBufferedWriter(path)) {
                     bw.write("""
                             {
-                                "name": "Standard",
+                                "name": "standard",
                                 "istAktivesProfil": true,
-                                "stats": {
-                                    "1": 0,
-                                    "2": 0,
-                                    "3": 0,
-                                    "4": 0,
-                                    "5": 0,
-                                    "6": 0,
-                                    "7": 0,
-                                    "8": 0,
-                                    "9": 0,
-                                    "10": 0
-                                },
-                                "dateLastChecked": {
-                                    "1": "06-04-11/13-16",
-                                    "2": "06-04-11/13-16",
-                                    "3": "06-04-11/13-16",
-                                    "4": "06-04-11/13-16",
-                                    "5": "06-04-11/13-16",
-                                    "6": "06-04-11/13-16",
-                                    "7": "06-04-11/13-16",
-                                    "8": "06-04-11/13-16",
-                                    "9": "06-04-11/13-16",
-                                    "10": "06-04-11/13-16"
-                                },
-                                "dateLastRichtig": {
-                                    "1": "06-04-11/13-16",
-                                    "2": "06-04-11/13-16",
-                                    "3": "06-04-11/13-16",
-                                    "4": "06-04-11/13-16",
-                                    "5": "06-04-11/13-16",
-                                    "6": "06-04-11/13-16",
-                                    "7": "06-04-11/13-16",
-                                    "8": "06-04-11/13-16",
-                                    "9": "06-04-11/13-16",
-                                    "10": "06-04-11/13-16"
-                                }
+                                "stats": []
                             }""");
                 }
                 break;

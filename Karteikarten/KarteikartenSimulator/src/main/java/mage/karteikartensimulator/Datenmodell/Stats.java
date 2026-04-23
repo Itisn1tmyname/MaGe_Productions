@@ -65,9 +65,9 @@ public class Stats {
         return '{' +
                 " \n\t\"id\": \"" + id + "\"," +
                 " \n\t\"evaluation\": " + evaluation +
-                ", \n\t\"dateLastChecked\": \"" + dateLastChecked.format(Data.PROFIL_FORMATTER) + '\"' +
-                ", \n\t\"dateLastRichtig\": \"" + dateLastRichtig.format(Data.PROFIL_FORMATTER) + '\"' +
-                '}';
+                ", \n\t\"dateLastChecked\": \"" + dateLastChecked.format(Data.PROFIL_FORMATTER) + "\"," +
+                " \n\t\"dateLastRichtig\": \"" + dateLastRichtig.format(Data.PROFIL_FORMATTER) + '\"' +
+                "\n}";
     }
 
 

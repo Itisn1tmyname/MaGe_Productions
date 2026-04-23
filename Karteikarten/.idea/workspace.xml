@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Datenmodell Improvement">
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="JSON regex parser für Profil und Stats">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Karteikarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Karteikarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Profil.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Profil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Datenmodell/Stats.java" afterDir="false" />
     </list>
@@ -116,7 +115,7 @@
       <workItem from="1776404728457" duration="8599000" />
       <workItem from="1776843130381" duration="17000" />
       <workItem from="1776843173699" duration="10229000" />
-      <workItem from="1776929968121" duration="6613000" />
+      <workItem from="1776929968121" duration="14277000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
       <option name="closed" value="true" />
@@ -190,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776863039824</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="JSON regex parser für Profil und Stats">
+      <option name="closed" value="true" />
+      <created>1776936745281</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1776936745282</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +223,7 @@
     <MESSAGE value="Karteikarten Styling - fixed shadow problem" />
     <MESSAGE value="Wertung der Karten (Richtig/Falsch)" />
     <MESSAGE value="Datenmodell Improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Datenmodell Improvement" />
+    <MESSAGE value="JSON regex parser für Profil und Stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSON regex parser für Profil und Stats" />
   </component>
 </project>
