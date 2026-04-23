@@ -3,12 +3,17 @@ package mage.karteikartensimulator.Datenmodell;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Profil {
 
     public String name;
     private boolean istAktivesProfil;
     private HashMap<String, Stats> stats; //einer Karten-ID wird eine Wertung zugeordnet
+    public static final Pattern profilPattern = Pattern.compile("\\s*\\{\\s*\"name\": \"(?<name>.+)\",\\s*"
+            + "\"istAktivesProfil\": (?<aktiv>true|false),\\s*"
+            + "\"stats\": \\[(?<stats>[\\s\\S]*)]\\s*}\\s*");
 
     /**
      *
@@ -29,8 +34,19 @@ public class Profil {
      *             }
      *
      */
-    public Profil(String json) {
-        //TODO
+    public Profil(String json) throws Exception{
+        Matcher matcher = profilPattern.matcher(json);
+
+        if (matcher.matches()) {
+            this.stats = new HashMap<>();
+            Matcher statMatcher = Stats.statPattern.matcher(matcher.group("stats"));
+            while (statMatcher.find()) {
+                stats.put(statMatcher.group("id"), new Stats(statMatcher.group()));
+            }
+            this.name = matcher.group("name");
+            this.istAktivesProfil = matcher.group("aktiv").equals("true");
+
+        } else throw new Exception("Profil: JSON input doesn't match correctly, please check .json file!\n\nWrong input:\n"+json);
     }
 
     public Profil(String name, HashMap<String, Stats> stats) {

@@ -101,7 +101,7 @@ public class Karteikarte {
 
         } else {
             System.out.println(json);
-            throw new Exception("JSON input doesn't match correctly, please check .json file!");
+            throw new Exception("Karteikarte: JSON input doesn't match correctly, please check .json file!\n\nWrong input:\n"+json);
         }
     }
 

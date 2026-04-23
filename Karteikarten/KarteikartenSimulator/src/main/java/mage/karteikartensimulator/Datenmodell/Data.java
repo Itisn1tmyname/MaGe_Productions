@@ -25,7 +25,7 @@ public class Data {
     public static final String PROFIL_STANDARD_FILENAME = "Profile/standard.json";
 
     public static final DateTimeFormatter ID_FORMATTER = DateTimeFormatter.ofPattern("yy-D-NNNN");
-    public static final DateTimeFormatter PROFIL_FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd hh:mm");
+    public static final DateTimeFormatter PROFIL_FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm");
 
     private static final Map<String, KarteiSet> kartenSets = new HashMap<>();
     private static final Map<String, Profil> profile = new HashMap<>();
