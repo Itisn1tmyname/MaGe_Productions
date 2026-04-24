@@ -2,23 +2,6 @@
 	"name": "standard", 
 	"istAktivesProfil": true, 
 	"stats": [
-		{ 
-			"id": "26-103-36976869865800_A/G", 
-			"evaluation": 1, 
-			"dateLastChecked": "2026.04.24 10:13", 
-			"dateLastRichtig": "2026.04.24 10:13"
-		},
-		{ 
-			"id": "26-103-39189196882900_P/W", 
-			"evaluation": 0, 
-			"dateLastChecked": "2026.04.24 10:13", 
-			"dateLastRichtig": "1999.01.01 00:00"
-		},
-		{ 
-			"id": "26-103-40785978802800_Z/W", 
-			"evaluation": 0, 
-			"dateLastChecked": "2026.04.24 10:13", 
-			"dateLastRichtig": "1999.01.01 00:00"
-		}
+		
 	]
 }
