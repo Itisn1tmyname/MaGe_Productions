@@ -10,12 +10,13 @@ import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.*;
-import mage.karteikartensimulator.Datenmodell.Data;
-import mage.karteikartensimulator.Datenmodell.KarteiSet;
-import mage.karteikartensimulator.Datenmodell.Profil;
+import mage.karteikartensimulator.Datenmodell.*;
 import mage.karteikartensimulator.Main;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -75,6 +76,9 @@ public class MainMenu {
     public void handleStart() {
         //TODO: frage nach gewünschten Sortier- oder Filterfunktionen
         if (selectedSet == null || selectedSet.getKarten().isEmpty()) return;
+
+        KarteiSet set = setFiltern();
+
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiFrage.fxml"));
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
@@ -87,11 +91,44 @@ public class MainMenu {
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.getScene().setFill(Color.TRANSPARENT);
             Frage frage = loader.getController();
-            frage.starten(selectedSet.getKarten(), stage);
+            frage.starten(set.getKarten(), stage);
             stage.show();
         } catch (IOException ignored) {
             //TODO
         }
+    }
+
+    //TODO: Vor Anzeigen des Sets fragen, wie/ob gefiltert werden soll...
+    private KarteiSet setFiltern() {
+
+        //gefiltertes KartenSet: Teil der Karten, die nach Karteibox-Prinzip tatsächlich angezeigt werden
+        KarteiSet filtered = new KarteiSet(selectedSet.getName(), selectedSet.getInfo(), new ArrayList<Karteikarte>());
+
+        //TODO: Variablen in config einführen, die über die Zeitabstände pro nacheinander Richtig beantwortet bestimmen (Hier hardcoded: Einmal richtig: 2 Tage warten, 2mal richtig: 4 Tage...
+        final int[] tage = {1,3,6,13}; //Wenn nach zwei Tagen wieder gefragt wird, dann muss ein Tag übersprungen werden
+
+        HashMap<String, Stats> tempMap = Data.getInstance().getActiveProfil().getStats();
+
+        for (Karteikarte karte : selectedSet.getKarten()) {
+            String id = karte.getId();
+            if (!tempMap.containsKey(id)) {
+                //Wenn Karte dem Profil noch nicht bekannt ist (noch nicht als richtig/falsch beantwortet gespeichert) füge sie dem Set hinzu
+                filtered.getKarten().add(karte);
+            } else {
+                //Nachschauen, ob die Karte positive Wertung hat (ein bis mehrmals richtig beantwortet), dann nach Datum filtern
+                Stats stats = tempMap.get(id);
+                if (stats.evaluation() <= 0) { //Wenn die Karte zuletzt falsch beantwortet wurde, füge sie dem Set hinzu
+                    filtered.getKarten().add(karte);
+
+                } else {
+                    int i = (stats.evaluation() > tage.length) ? tage.length - 1 : stats.evaluation() - 1;
+                    if (stats.dateLastRichtig().plusDays(tage[i]).isBefore(LocalDateTime.now())) //Wenn laut Werte-Tabelle genug Tage verstrichen sind
+                        filtered.getKarten().add(karte);
+                }
+            }
+        }
+
+        return filtered;
     }
 
     public void initialize() {

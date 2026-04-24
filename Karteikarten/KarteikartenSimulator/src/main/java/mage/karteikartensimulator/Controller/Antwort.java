@@ -47,20 +47,19 @@ public class Antwort {
 
     @FXML
     public void handleNichtWerten() {
+        Data.getInstance().getActiveProfil().nichtWerten(karte.getId());
         next();
     }
 
     @FXML
     public void handleRichtig() {
         Data.getInstance().getActiveProfil().stufeSteigern(karte.getId());
-//        System.out.println(Data.getInstance().getActiveProfil().getStufe(karte.getId()));
         next();
     }
 
     @FXML
     public void handleFalsch() {
         Data.getInstance().getActiveProfil().stufeKleiner(karte.getId());
-//        System.out.println(Data.getInstance().getActiveProfil().getStufe(karte.getId()));
         next();
     }
 

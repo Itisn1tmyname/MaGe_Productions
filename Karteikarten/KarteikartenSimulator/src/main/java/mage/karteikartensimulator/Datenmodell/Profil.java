@@ -9,7 +9,7 @@ public class Profil {
 
     public String name;
     private boolean istAktivesProfil;
-    private HashMap<String, Stats> stats; //einer Karten-ID wird eine Wertung zugeordnet
+    private static final HashMap<String, Stats> stats = new HashMap<>(); //einer Karten-ID wird eine Wertung zugeordnet
     public static final Pattern profilPattern = Pattern.compile("\\s*\\{\\s*\"name\": \"(?<name>.+)\",\\s*"
             + "\"istAktivesProfil\": (?<aktiv>true|false),\\s*"
             + "\"stats\": \\[(?<stats>[\\s\\S]*)]\\s*}\\s*");
@@ -37,14 +37,13 @@ public class Profil {
         Matcher matcher = profilPattern.matcher(json);
 
         if (matcher.matches()) {
-            this.stats = new HashMap<>();
             String stats = matcher.group("stats");
             if (!stats.trim().isEmpty()) {
                 String[] statArray = stats.split("},");
                 for (int i = 0; i < statArray.length; i++) {
                     Matcher statMatcher = Stats.statPattern.matcher(i < statArray.length - 1  ? statArray[i] + "}" : statArray[i]);
                     if (statMatcher.matches())
-                        this.stats.put(statMatcher.group("id"), new Stats(statMatcher.group()));
+                        Profil.stats.put(statMatcher.group("id"), new Stats(statMatcher.group()));
                 }
             }
             this.name = matcher.group("name");
@@ -55,13 +54,13 @@ public class Profil {
 
     public Profil(String name, HashMap<String, Stats> stats) {
         this.name = name;
-        this.stats = stats;
+        Profil.stats.putAll(stats);
     }
 
     @Override
     public String toString() {
         StringBuilder stats = new StringBuilder("\n");
-        Iterator<Stats> i = this.stats.values().iterator();
+        Iterator<Stats> i = Profil.stats.values().iterator();
         while (i.hasNext()){
             stats.append(i.next().toString());
             if (i.hasNext()) stats.append(",\n");
@@ -87,8 +86,12 @@ public class Profil {
         else stats.put(kartenID, new Stats(kartenID, 0));
     }
 
-    public Stats getStats(String kartenID){
-        return stats.get(kartenID);
+    public void nichtWerten(String kartenID) {
+        if (stats.containsKey(kartenID)) stats.get(kartenID).nichtWerten();
+    }
+
+    public HashMap<String, Stats> getStats(){
+        return stats;
     }
 
     public boolean istAktiv(){

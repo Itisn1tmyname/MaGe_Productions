@@ -57,7 +57,7 @@ public class Stats {
     }
 
     public Stats(String id, Integer evaluation) {
-        this(id, evaluation, LocalDateTime.now(), LocalDateTime.now().minusYears(20));
+        this(id, evaluation, LocalDateTime.now(), (evaluation > 0) ? LocalDateTime.now() : LocalDateTime.of(1999, 1, 1, 0, 0));
     }
 
     @Override
@@ -73,10 +73,17 @@ public class Stats {
 
     public void stufeSteigern(){
         evaluation = (evaluation > 0) ? evaluation + 1 : 1;
+        dateLastChecked = LocalDateTime.now();
+        dateLastRichtig = LocalDateTime.now();
     }
 
     public void stufeKleiner(){
         evaluation = (evaluation > 0) ? 0 : evaluation - 1;
+        dateLastChecked = LocalDateTime.now();
+    }
+
+    public void nichtWerten() {
+        dateLastChecked = LocalDateTime.now();
     }
 
     public String id() {
@@ -85,10 +92,6 @@ public class Stats {
 
     public Integer evaluation() {
         return evaluation;
-    }
-
-    public void setEvaluation(Integer evaluation) {
-        this.evaluation = evaluation;
     }
 
     public LocalDateTime dateLastChecked() {
