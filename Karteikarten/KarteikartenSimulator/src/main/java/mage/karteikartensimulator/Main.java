@@ -49,8 +49,10 @@ public class Main extends Application {
         stage.setFullScreenExitHint("");
         stage.setScene(new Scene(fxmlLoader.load()));
         MainMenu mainMenu = fxmlLoader.getController();
-        stage.fullScreenProperty().addListener(_ -> {
-            mainMenu.setPaneInsets(12);
+        stage.fullScreenProperty().addListener((_,_,n) -> {
+            if (n) mainMenu.setPaneInsets(0);
+            else mainMenu.setPaneInsets(12);
+            mainMenu.setFullScreenIcons(n);
         });
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.getScene().setFill(Color.TRANSPARENT);

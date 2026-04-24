@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment=".gitignore Test">
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Fixed errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiAntwort.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiAntwort.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777018818036</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed errors">
+      <option name="closed" value="true" />
+      <created>1777040711744</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777040711744</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +282,7 @@
     <MESSAGE value="Karten werden gefiltert, wenn richtig dann erst nach n Tagen wieder" />
     <MESSAGE value=".gitignore Update" />
     <MESSAGE value=".gitignore Test" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore Test" />
+    <MESSAGE value="Fixed errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed errors" />
   </component>
 </project>

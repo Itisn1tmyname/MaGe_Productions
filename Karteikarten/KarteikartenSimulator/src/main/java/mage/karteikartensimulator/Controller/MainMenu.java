@@ -14,6 +14,8 @@ import javafx.scene.text.Font;
 import javafx.stage.*;
 import mage.karteikartensimulator.Datenmodell.*;
 import mage.karteikartensimulator.Main;
+import org.kordamp.ikonli.javafx.FontIcon;
+import org.kordamp.ikonli.javafx.Icon;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -30,6 +32,12 @@ public class MainMenu {
     private ToggleGroup toggleGroupKartenSets;
     @FXML
     private StackPane mainPane;
+    @FXML
+    private FontIcon iconFullscreen;
+    @FXML
+    private FontIcon iconClose;
+    @FXML
+    private FontIcon iconMinimize;
 
     @FXML
     private Button buttonKarteiErstellen;
@@ -176,7 +184,30 @@ public class MainMenu {
         Main.getStage().close();
     }
 
+    @FXML
+    public void handleMinimize() {
+        Main.getStage().setIconified(true);
+    }
+
+    @FXML
+    public void handleFullscreen() {
+        Main.getStage().setFullScreen(!Main.getStage().isFullScreen());
+    }
+
     public void setPaneInsets(double insets) {
         mainPane.setPadding(new Insets(insets));
+    }
+
+    public void setFullScreenIcons(boolean fullscreen) {
+        if (fullscreen){
+            iconMinimize.setIconLiteral("codicon-chevron-down:35:DIMGREY");
+            iconFullscreen.setIconLiteral("mdi2f-fullscreen-exit:35:DIMGREY");
+            iconClose.setIconLiteral("mdi2w-window-close:35:DIMGREY");
+        }
+        else {
+            iconMinimize.setIconLiteral("codicon-chevron-down:30:DIMGREY");
+            iconFullscreen.setIconLiteral("mdi2f-fullscreen:30:DIMGREY");
+            iconClose.setIconLiteral("mdi2w-window-close:30:DIMGREY");
+        }
     }
 }

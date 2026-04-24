@@ -5,11 +5,10 @@
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
-
-
 <?import javafx.scene.Group?>
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
+
 <StackPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="mage.karteikartensimulator.Controller.MainMenu"
@@ -131,14 +130,28 @@
                 </bottom>
 
                 <right>
-                    <Label onMouseClicked="#handleClose" >
-                        <padding>
-                            <Insets bottom="20"/>
-                        </padding>
-                        <graphic>
-                            <FontIcon iconLiteral="mdi2a-alpha-x:50"/>
-                        </graphic>
-                    </Label>
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT"/>
+                            <ColumnConstraints halignment="CENTER"/>
+                            <ColumnConstraints halignment="CENTER"/>
+                        </columnConstraints>
+                        <Label onMouseClicked="#handleMinimize" GridPane.columnIndex="0">
+                            <graphic>
+                                <FontIcon iconLiteral="codicon-chevron-down:35:DIMGREY" fx:id="iconMinimize"/>
+                            </graphic>
+                        </Label>
+                        <Label onMouseClicked="#handleFullscreen" GridPane.columnIndex="1">
+                            <graphic>
+                                <FontIcon iconLiteral="mdi2f-fullscreen-exit:35:DIMGREY" fx:id="iconFullscreen"/>
+                            </graphic>
+                        </Label>
+                        <Label onMouseClicked="#handleClose" GridPane.columnIndex="2">
+                            <graphic>
+                                <FontIcon iconLiteral="mdi2w-window-close:35:DIMGREY" fx:id="iconClose"/>
+                            </graphic>
+                        </Label>
+                    </GridPane>
                 </right>
 
             </BorderPane>

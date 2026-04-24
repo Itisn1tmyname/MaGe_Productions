@@ -51,7 +51,7 @@
                         <Insets bottom="20"/>
                     </padding>
                     <graphic>
-                        <FontIcon iconLiteral="mdi2a-alpha-x:50"/>
+                        <FontIcon iconLiteral="mdi2a-alpha-x:50:DIMGREY"/>
                     </graphic>
                 </Label>
             </GridPane>
