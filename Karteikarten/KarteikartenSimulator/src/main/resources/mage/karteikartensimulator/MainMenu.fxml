@@ -8,90 +8,140 @@
 
 
 <?import javafx.scene.Group?>
-<BorderPane xmlns="http://javafx.com/javafx"
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<StackPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="mage.karteikartensimulator.Controller.MainMenu"
-            prefWidth="1200" prefHeight="750" fx:id="mainBorderPane">
-    <left>
-        <VBox style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-style: hidden solid hidden hidden"
-              prefWidth="250">
-            <padding>
-                <Insets top="40" bottom="40" left="20" right="10"/>
-            </padding>
-            <Button text="START" prefWidth="200" fx:id="buttonStart" onAction="#handleStart">
-                <font>
-                    <Font name="System Bold" size="20.0" />
-                </font>
-            </Button>
-            <VBox alignment="CENTER" VBox.vgrow="ALWAYS" spacing="10">
+            prefWidth="1400" prefHeight="800" fx:id="mainPane"
+            style="-fx-effect: dropshadow(three-pass-box, dimgrey, 10, 0, 4, 4); -fx-background-color: null">
+    <padding>
+        <Insets topRightBottomLeft="0"/>
+    </padding>
+    <BorderPane style="-fx-background-color: white">
+        <left>
+            <VBox style="-fx-border-color: grey; -fx-border-width: 2; -fx-border-style: hidden solid hidden hidden"
+                  prefWidth="250">
                 <padding>
-                    <Insets top="40" bottom="40"/>
+                    <Insets top="40" bottom="40" left="20" right="10"/>
                 </padding>
-                <Button text="Neues Set erstellen" prefWidth="200" fx:id="buttonNeuesSet">
+                <Button text="START" prefWidth="200" fx:id="buttonStart" onAction="#handleStart">
                     <font>
-                        <Font size="15" />
+                        <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button text="Karteikarte Erstelllen" prefWidth="200" fx:id="buttonKarteiErstellen"
-                        onAction="#handleKarteiErstellen">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-                <Button text="Profil wechseln" prefWidth="200">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-                <Button text="Externe Sets integrieren" prefWidth="200">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-            </VBox>
-            <VBox alignment="BOTTOM_CENTER" spacing="10">
-                <Button text="Optionen" prefWidth="200">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-                <Button text="Bedienungsanleitung" prefWidth="200">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-                <Button text="Speichern und Beenden" prefWidth="200">
-                    <font>
-                        <Font size="15" />
-                    </font>
-                </Button>
-            </VBox>
-        </VBox>
-    </left>
 
-    <center>
-        <VBox>
-            <TilePane VBox.vgrow="ALWAYS" vgap="15" hgap="15" fx:id="tileKartenSets"
-                      style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden">
-                <padding>
-                    <Insets topRightBottomLeft="20"/>
-                </padding>
-                <fx:define>
-                    <ToggleGroup fx:id="toggleGroupKartenSets"/>
-                </fx:define>
-            </TilePane>
+                <Label text="Filtern?">
 
-            <Label fx:id="labelSetInfo" text="Bitte wähle ein Karteikartenset aus, um zu starten!">
-                <graphic>
-                    <FontIcon iconLiteral="mdi2i-information-box-outline:30:GREY"/>
-                </graphic>
-                <padding>
-                    <Insets topRightBottomLeft="5"/>
-                </padding>
-                <font>
-                    <Font size="15"/>
-                </font>
-            </Label>
-        </VBox>
-    </center>
-</BorderPane>
+                </Label>
+                <ComboBox>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Nach Karteibox-Prinzip"/>
+                            <String fx:value="Nicht Filtern"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <Label text="Mischen/Sortieren?">
+
+                </Label>
+                <ComboBox>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Nach Karteibox-Prinzip"/>
+                            <String fx:value="Nicht Sortieren"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <VBox alignment="CENTER" VBox.vgrow="ALWAYS" spacing="10">
+                    <padding>
+                        <Insets top="40" bottom="40"/>
+                    </padding>
+                    <Button text="Neues Set erstellen" prefWidth="200" fx:id="buttonNeuesSet">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                    <Button text="Karteikarte Erstelllen" prefWidth="200" fx:id="buttonKarteiErstellen"
+                            onAction="#handleKarteiErstellen">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                    <Button text="Profil wechseln" prefWidth="200">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                    <Button text="Externe Sets integrieren" prefWidth="200">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                </VBox>
+                <VBox alignment="BOTTOM_CENTER" spacing="10">
+                    <Button text="Optionen" prefWidth="200">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                    <Button text="Bedienungsanleitung" prefWidth="200">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                    <Button text="Speichern und Beenden" prefWidth="200">
+                        <font>
+                            <Font size="15" />
+                        </font>
+                    </Button>
+                </VBox>
+            </VBox>
+        </left>
+
+        <center>
+            <BorderPane>
+                <center>
+                    <TilePane vgap="15" hgap="15" fx:id="tileKartenSets">
+                        <padding>
+                            <Insets topRightBottomLeft="20"/>
+                        </padding>
+                        <fx:define>
+                            <ToggleGroup fx:id="toggleGroupKartenSets"/>
+                        </fx:define>
+                    </TilePane>
+                </center>
+
+                <bottom>
+                    <AnchorPane style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: solid hidden hidden hidden">
+                        <Label fx:id="labelSetInfo" text="Bitte wähle ein Karteikartenset aus, um zu starten!">
+                            <graphic>
+                                <FontIcon iconLiteral="mdi2i-information-box-outline:30:GREY"/>
+                            </graphic>
+                            <padding>
+                                <Insets topRightBottomLeft="5"/>
+                            </padding>
+                            <font>
+                                <Font size="15"/>
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </bottom>
+
+                <right>
+                    <Label onMouseClicked="#handleClose" >
+                        <padding>
+                            <Insets bottom="20"/>
+                        </padding>
+                        <graphic>
+                            <FontIcon iconLiteral="mdi2a-alpha-x:50"/>
+                        </graphic>
+                    </Label>
+                </right>
+
+            </BorderPane>
+        </center>
+    </BorderPane>
+</StackPane>

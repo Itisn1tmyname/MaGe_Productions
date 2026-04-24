@@ -2,10 +2,12 @@ package mage.karteikartensimulator.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -27,7 +29,7 @@ public class MainMenu {
     @FXML
     private ToggleGroup toggleGroupKartenSets;
     @FXML
-    private BorderPane mainBorderPane;
+    private static StackPane mainPane;
 
     @FXML
     private Button buttonKarteiErstellen;
@@ -46,7 +48,7 @@ public class MainMenu {
     @FXML
     public void handleKarteiErstellen() {
         Dialog<ButtonType> dialog = new Dialog<>();
-        dialog.initOwner(mainBorderPane.getScene().getWindow());
+        dialog.initOwner(mainPane.getScene().getWindow());
         dialog.setTitle("Karteikarte Erstellen...");
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("DialogKarteiErstellen.fxml"));
         try {
@@ -82,10 +84,10 @@ public class MainMenu {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("KarteiFrage.fxml"));
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.initOwner(mainBorderPane.getScene().getWindow());
+        stage.initOwner(mainPane.getScene().getWindow());
         stage.setAlwaysOnTop(true);
 //        stage.setFullScreen(true);
-        stage.setFullScreenExitHint("");
+//        stage.setFullScreenExitHint("");
         try {
             stage.setScene(new Scene(loader.load()));
             stage.initStyle(StageStyle.TRANSPARENT);
@@ -167,5 +169,14 @@ public class MainMenu {
     private void setInfo() {
         labelSetInfo.setText(selectedSet == null ? "Bitte wähle ein Karteikartenset aus, um zu starten!"
                 : selectedSet.getName() + ": " + selectedSet.getInfo());
+    }
+
+    @FXML
+    public void handleClose() {
+        Main.getStage().close();
+    }
+
+    public static void setPaneInsets(double insets) {
+        mainPane.setPadding(new Insets(insets));
     }
 }

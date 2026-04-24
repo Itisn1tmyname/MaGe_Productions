@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment=".gitignore Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +119,7 @@
       <workItem from="1776843173699" duration="10229000" />
       <workItem from="1776929968121" duration="14373000" />
       <workItem from="1777009740164" duration="8365000" />
+      <workItem from="1777018773390" duration="5072000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
       <option name="closed" value="true" />
@@ -226,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777018472314</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=".gitignore Test">
+      <option name="closed" value="true" />
+      <created>1777018818036</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777018818036</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

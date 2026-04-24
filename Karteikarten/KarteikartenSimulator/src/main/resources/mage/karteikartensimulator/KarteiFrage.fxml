@@ -18,7 +18,7 @@
     <BorderPane style="-fx-border-style: solid; -fx-border-color: grey; -fx-border-width: 2; -fx-background-color: white"
                 VBox.vgrow="ALWAYS">
         <top>
-            <!--Links: "Frage", Rechts: Lernfeld -->
+            <!--Links: "Frage", Mitte: Lernfeld, Rechts: Panel Schließen-->
             <GridPane style="-fx-border-width: 2; -fx-border-color: grey; -fx-border-style: hidden hidden solid hidden"
                       gridLinesVisible="false">
                 <columnConstraints>
