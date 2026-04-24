@@ -130,28 +130,40 @@
                 </bottom>
 
                 <right>
-                    <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints halignment="RIGHT"/>
-                            <ColumnConstraints halignment="CENTER"/>
-                            <ColumnConstraints halignment="CENTER"/>
-                        </columnConstraints>
-                        <Label onMouseClicked="#handleMinimize" GridPane.columnIndex="0">
-                            <graphic>
-                                <FontIcon iconLiteral="codicon-chevron-down:35:DIMGREY" fx:id="iconMinimize"/>
-                            </graphic>
-                        </Label>
-                        <Label onMouseClicked="#handleFullscreen" GridPane.columnIndex="1">
-                            <graphic>
-                                <FontIcon iconLiteral="mdi2f-fullscreen-exit:35:DIMGREY" fx:id="iconFullscreen"/>
-                            </graphic>
-                        </Label>
-                        <Label onMouseClicked="#handleClose" GridPane.columnIndex="2">
-                            <graphic>
-                                <FontIcon iconLiteral="mdi2w-window-close:35:DIMGREY" fx:id="iconClose"/>
-                            </graphic>
-                        </Label>
-                    </GridPane>
+                    <VBox>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints halignment="RIGHT"/>
+                                <ColumnConstraints halignment="CENTER"/>
+                                <ColumnConstraints halignment="CENTER"/>
+                            </columnConstraints>
+                            <Label onMouseClicked="#handleMinimize" GridPane.columnIndex="0">
+                                <graphic>
+                                    <FontIcon iconLiteral="codicon-chevron-down:35:DIMGREY" fx:id="iconMinimize"/>
+                                </graphic>
+                            </Label>
+                            <Label onMouseClicked="#handleFullscreen" GridPane.columnIndex="1">
+                                <graphic>
+                                    <FontIcon iconLiteral="mdi2f-fullscreen-exit:35:DIMGREY" fx:id="iconFullscreen"/>
+                                </graphic>
+                            </Label>
+                            <Label onMouseClicked="#handleClose" GridPane.columnIndex="2">
+                                <graphic>
+                                    <FontIcon iconLiteral="mdi2w-window-close:35:DIMGREY" fx:id="iconClose"/>
+                                </graphic>
+                            </Label>
+                        </GridPane>
+                        <StackPane alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                            <padding>
+                                <Insets bottom="10" right="10"/>
+                            </padding>
+                            <Label onMouseClicked="#handleGithub" alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                <graphic>
+                                    <FontIcon iconLiteral="codicon-github-inverted:50:DIMGREY" fx:id="iconGit"/>
+                                </graphic>
+                            </Label>
+                        </StackPane>
+                    </VBox>
                 </right>
 
             </BorderPane>

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Fixed errors">
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Window Styling, Minimize &amp; Fullscreen Toggle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" beforeDir="false" afterPath="$PROJECT_DIR$/Karteikarten-config/Profile/standard.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Controller/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/mage/karteikartensimulator/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiAntwort.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiAntwort.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/KarteiFrage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/src/main/resources/mage/karteikartensimulator/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777040711744</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Window Styling, Minimize &amp; Fullscreen Toggle">
+      <option name="closed" value="true" />
+      <created>1777046615431</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777046615431</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +287,7 @@
     <MESSAGE value=".gitignore Update" />
     <MESSAGE value=".gitignore Test" />
     <MESSAGE value="Fixed errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed errors" />
+    <MESSAGE value="Window Styling, Minimize &amp; Fullscreen Toggle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Window Styling, Minimize &amp; Fullscreen Toggle" />
   </component>
 </project>

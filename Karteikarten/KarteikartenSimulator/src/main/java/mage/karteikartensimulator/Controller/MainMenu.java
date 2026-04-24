@@ -1,10 +1,14 @@
 package mage.karteikartensimulator.Controller;
 
+import javafx.application.HostServices;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -16,8 +20,11 @@ import mage.karteikartensimulator.Datenmodell.*;
 import mage.karteikartensimulator.Main;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.javafx.Icon;
-
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +45,8 @@ public class MainMenu {
     private FontIcon iconClose;
     @FXML
     private FontIcon iconMinimize;
+    @FXML
+    private FontIcon iconGit;
 
     @FXML
     private Button buttonKarteiErstellen;
@@ -194,6 +203,11 @@ public class MainMenu {
         Main.getStage().setFullScreen(!Main.getStage().isFullScreen());
     }
 
+    @FXML
+    public void handleGithub() {
+         new Main().browser("https://github.com/Itisn1tmyname/MaGe_Productions");
+    }
+
     public void setPaneInsets(double insets) {
         mainPane.setPadding(new Insets(insets));
     }
@@ -203,11 +217,13 @@ public class MainMenu {
             iconMinimize.setIconLiteral("codicon-chevron-down:35:DIMGREY");
             iconFullscreen.setIconLiteral("mdi2f-fullscreen-exit:35:DIMGREY");
             iconClose.setIconLiteral("mdi2w-window-close:35:DIMGREY");
+            iconGit.setIconLiteral("codicon-github-inverted:50:DIMGREY");
         }
         else {
             iconMinimize.setIconLiteral("codicon-chevron-down:30:DIMGREY");
             iconFullscreen.setIconLiteral("mdi2f-fullscreen:30:DIMGREY");
             iconClose.setIconLiteral("mdi2w-window-close:30:DIMGREY");
+            iconGit.setIconLiteral("codicon-github-inverted:35:DIMGREY");
         }
     }
 }

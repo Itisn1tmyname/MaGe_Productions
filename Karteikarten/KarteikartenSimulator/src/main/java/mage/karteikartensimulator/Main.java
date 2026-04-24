@@ -92,4 +92,9 @@ public class Main extends Application {
     public static Stage getStage() {
         return mainStage;
     }
+
+    public void browser(String url) {
+        getHostServices().showDocument(url);
+        mainStage.setIconified(true);
+    }
 }
