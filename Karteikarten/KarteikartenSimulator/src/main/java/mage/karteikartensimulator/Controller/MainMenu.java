@@ -29,7 +29,7 @@ public class MainMenu {
     @FXML
     private ToggleGroup toggleGroupKartenSets;
     @FXML
-    private static StackPane mainPane;
+    private StackPane mainPane;
 
     @FXML
     private Button buttonKarteiErstellen;
@@ -176,7 +176,7 @@ public class MainMenu {
         Main.getStage().close();
     }
 
-    public static void setPaneInsets(double insets) {
+    public void setPaneInsets(double insets) {
         mainPane.setPadding(new Insets(insets));
     }
 }

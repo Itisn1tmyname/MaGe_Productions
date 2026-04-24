@@ -17,8 +17,6 @@ import mage.karteikartensimulator.Datenmodell.Data;
 import mage.karteikartensimulator.Datenmodell.KarteiSet;
 import mage.karteikartensimulator.Datenmodell.Karteikarte;
 import mage.karteikartensimulator.Datenmodell.Profil;
-
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -49,14 +47,11 @@ public class Main extends Application {
         stage.setTitle("Karteikarten Simulator ver. " + VERSION);
         stage.setFullScreen(true);
         stage.setFullScreenExitHint("");
-        stage.fullScreenProperty().addListener(new InvalidationListener() {
-            @Override
-            public void invalidated(Observable observable) {
-                MainMenu.setPaneInsets(12);
-            }
-        });
-//        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(fxmlLoader.load()));
+        MainMenu mainMenu = fxmlLoader.getController();
+        stage.fullScreenProperty().addListener(_ -> {
+            mainMenu.setPaneInsets(12);
+        });
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.getScene().setFill(Color.TRANSPARENT);
         stage.show();
