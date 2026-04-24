@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment="Karten werden gefiltert, wenn richtig dann erst nach n Tagen wieder">
-      <change beforePath="$PROJECT_DIR$/KarteikartenSimulator/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/KarteikartenSimulator/.gitignore" afterDir="false" />
+    <list default="true" id="7251d150-08fc-4d7c-a3e7-7f7c9d6b34ba" name="Changes" comment=".gitignore Test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,7 @@
       <workItem from="1776843130381" duration="17000" />
       <workItem from="1776843173699" duration="10229000" />
       <workItem from="1776929968121" duration="14373000" />
-      <workItem from="1777009740164" duration="8014000" />
+      <workItem from="1777009740164" duration="8365000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellen: wrapText=true">
       <option name="closed" value="true" />
@@ -210,7 +210,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777017886701</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=".gitignore Update">
+      <option name="closed" value="true" />
+      <created>1777018408330</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777018408330</updated>
+    </task>
+    <task id="LOCAL-00014" summary=".gitignore Test">
+      <option name="closed" value="true" />
+      <created>1777018472314</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777018472314</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +255,8 @@
     <MESSAGE value="JSON regex parser für Profil und Stats" />
     <MESSAGE value="fixed parsing bug in Profil(String json)" />
     <MESSAGE value="Karten werden gefiltert, wenn richtig dann erst nach n Tagen wieder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Karten werden gefiltert, wenn richtig dann erst nach n Tagen wieder" />
+    <MESSAGE value=".gitignore Update" />
+    <MESSAGE value=".gitignore Test" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore Test" />
   </component>
 </project>
